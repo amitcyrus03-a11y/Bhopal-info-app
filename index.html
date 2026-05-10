@@ -2,11 +2,16 @@
 <html>
 <head>
   <title>Bhopal Info</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <style>
-    .card { border:1px solid #ccc; padding:10px; margin:10px; border-radius:8px; }
-    .tag { background:#eee; padding:2px 6px; margin:2px; border-radius:4px; font-size:12px; }
-    .card-btn { background:#007bff; color:white; padding:5px 10px; margin:5px; text-decoration:none; border-radius:4px; display:inline-block; }
-    button { padding:10px; margin:5px; }
+    body { font-family: Arial; padding: 10px; }
+    .card { border:1px solid #ddd; padding:12px; margin:10px 0; border-radius:8px; background:#fff; }
+    .tag { background:#e9ecef; padding:3px 8px; margin:2px; border-radius:4px; font-size:12px; display:inline-block; }
+    .card-btn { background:#007bff; color:white; padding:6px 12px; margin:5px 5px 0 0; text-decoration:none; border-radius:4px; display:inline-block; font-size:14px; }
+    .map-btn { background:#28a745; }
+    button { padding:12px 20px; margin:5px; border:1px solid #ccc; border-radius:6px; background:#f8f9fa; font-size:16px; }
+    button:active { background:#e2e6ea; }
+    h2 { margin:10px 0; }
   </style>
 </head>
 <body>
@@ -20,17 +25,26 @@
   <script>
     function showRestaurant() {
       document.getElementById('list').innerHTML = `
-        <div class="card"><b>Indian Coffee House</b> ⭐ 4.2<br>📍 New Market<br>🕒 9:00 AM - 10:00 PM</div>
-        <div class="card"><b>Sagar Gaire</b> ⭐ 4.0<br>📍 MP Nagar<br>🕒 10:00 AM - 11:00 PM</div>
-        <div class="card"><b>Bapu Ki Kutia</b> ⭐ 4.3<br>📍 TT Nagar<br>🕒 8:00 AM - 10:00 PM</div>
+        <div class="card"><b>Indian Coffee House</b> ⭐ 4.2<br>📍 New Market, Bhopal<br>🕒 9:00 AM - 10:00 PM<br><span class="tag">South Indian</span><span class="tag">Coffee</span><span class="tag">Budget</span><br><a class="card-btn" href="tel:07554012345">📞 Call</a><a class="card-btn map-btn" href="https://maps.google.com/?q=Indian+Coffee+House+New+Market+Bhopal">📍 Map</a></div>
+        <div class="card"><b>Sagar Gaire Fast Food</b> ⭐ 4.0<br>📍 MP Nagar Zone-1, Bhopal<br>🕒 10:00 AM - 11:00 PM<br><span class="tag">Fast Food</span><span class="tag">Chinese</span><span class="tag">Snacks</span><br><a class="card-btn" href="tel:07554012346">📞 Call</a><a class="card-btn map-btn" href="https://maps.google.com/?q=Sagar+Gaire+MP+Nagar+Bhopal">📍 Map</a></div>
+        <div class="card"><b>Bapu Ki Kutia</b> ⭐ 4.3<br>📍 TT Nagar, Bhopal<br>🕒 8:00 AM - 10:00 PM<br><span class="tag">Thali</span><span class="tag">Gujarati</span><span class="tag">Veg</span><br><a class="card-btn" href="tel:07554012347">📞 Call</a><a class="card-btn map-btn" href="https://maps.google.com/?q=Bapu+Ki+Kutia+TT+Nagar+Bhopal">📍 Map</a></div>
+        <div class="card"><b>Manohar Dairy & Restaurant</b> ⭐ 4.4<br>📍 Hamidia Road, Bhopal<br>🕒 7:00 AM - 11:00 PM<br><span class="tag">Sweets</span><span class="tag">Snacks</span><span class="tag">Dairy</span><br><a class="card-btn" href="tel:07554012348">📞 Call</a><a class="card-btn map-btn" href="https://maps.google.com/?q=Manohar+Dairy+Hamidia+Road+Bhopal">📍 Map</a></div>
+        <div class="card"><b>Sharma Vishnu</b> ⭐ 4.1<br>📍 New Market, Bhopal<br>🕒 8:00 AM - 10:30 PM<br><span class="tag">Poha</span><span class="tag">Jalebi</span><span class="tag">Breakfast</span><br><a class="card-btn" href="tel:07554012349">📞 Call</a><a class="card-btn map-btn" href="https://maps.google.com/?q=Sharma+Vishnu+New+Market+Bhopal">📍 Map</a></div>
       `;
     }
 
     function showElectronics() {
       document.getElementById('list').innerHTML = `
-        <div class="card"><b>Reliance Digital</b> ⭐ 4.4<br>📍 DB City Mall<br>🕒 10:00 AM - 10:00 PM</div>
-        <div class="card"><b>Croma Electronics</b> ⭐ 4.3<br>📍 Ashima Mall<br>🕒 10:00 AM - 10:00 PM</div>
-        <div class="card"><b>Vijay Sales</b> ⭐ 4.2<br>📍 MP Nagar<br>🕒 10:00 AM - 9:30 PM</div>
+        <div class="card"><b>Reliance Digital</b> ⭐ 4.4<br>📍 DB City Mall, Arera Hills<br>🕒 10:00 AM - 10:00 PM<br><span class="tag">Mobile</span><span class="tag">Laptop</span><span class="tag">TV</span><span class="tag">EMI</span><br><a class="card-btn" href="tel:07554090909">📞 Call</a><a class="card-btn map-btn" href="https://maps.google.com/?q=Reliance+Digital+DB+Mall+Bhopal">📍 Map</a></div>
+        <div class="card"><b>Croma Electronics</b> ⭐ 4.3<br>📍 Ashima Mall, Hoshangabad Road<br>🕒 10:00 AM - 10:00 PM<br><span class="tag">AC</span><span class="tag">Fridge</span><span class="tag">Gadgets</span><br><a class="card-btn" href="tel:07554009100">📞 Call</a><a class="card-btn map-btn" href="https://maps.google.com/?q=Croma+Ashima+Mall+Bhopal">📍 Map</a></div>
+        <div class="card"><b>Vijay Sales</b> ⭐ 4.2<br>📍 MP Nagar Zone-1<br>🕒 10:00 AM - 9:30 PM<br><span class="tag">Home Appliance</span><span class="tag">Kitchen</span><span class="tag">Exchange</span><br><a class="card-btn" href="tel:07554009200">📞 Call</a><a class="card-btn map-btn" href="https://maps.google.com/?q=Vijay+Sales+MP+Nagar+Bhopal">📍 Map</a></div>
+        <div class="card"><b>Poorvika Mobiles</b> ⭐ 4.1<br>📍 New Market, Bhopal<br>🕒 10:00 AM - 9:00 PM<br><span class="tag">Smartphone</span><span class="tag">Accessories</span><span class="tag">Finance</span><br><a class="card-btn" href="tel:07554009300">📞 Call</a><a class="card-btn map-btn" href="https://maps.google.com/?q=Poorvika+New+Market+Bhopal">📍 Map</a></div>
+        <div class="card"><b>Sangeetha Mobiles</b> ⭐ 4.0<br>📍 10 No. Market<br>🕒 10:00 AM - 9:00 PM<br><span class="tag">iPhone</span><span class="tag">Samsung</span><span class="tag">OnePlus</span><br><a class="card-btn" href="tel:07554009400">📞 Call</a><a class="card-btn map-btn" href="https://maps.google.com/?q=Sangeetha+10+No+Market+Bhopal">📍 Map</a></div>
+        <div class="card"><b>Lotus Electronics</b> ⭐ 4.3<br>📍 Hoshangabad Road<br>🕒 10:00 AM - 9:00 PM<br><span class="tag">TV</span><span class="tag">Soundbar</span><span class="tag">AC</span><br><a class="card-btn" href="tel:07554009500">📞 Call</a><a class="card-btn map-btn" href="https://maps.google.com/?q=Lotus+Electronics+Hoshangabad+Road+Bhopal">📍 Map</a></div>
+        <div class="card"><b>Samsung Smart Plaza</b> ⭐ 4.5<br>📍 DB City Mall, Bhopal<br>🕒 10:00 AM - 10:00 PM<br><span class="tag">TV</span><span class="tag">Phone</span><span class="tag">Appliance</span><br><a class="card-btn" href="tel:07554009600">📞 Call</a><a class="card-btn map-btn" href="https://maps.google.com/?q=Samsung+Smart+Plaza+DB+Mall+Bhopal">📍 Map</a></div>
+        <div class="card"><b>LG Shoppe</b> ⭐ 4.4<br>📍 MP Nagar Zone-2<br>🕒 10:00 AM - 9:00 PM<br><span class="tag">OLED TV</span><span class="tag">Fridge</span><span class="tag">Washing Machine</span><br><a class="card-btn" href="tel:07554009700">📞 Call</a><a class="card-btn map-btn" href="https://maps.google.com/?q=LG+Shoppe+MP+Nagar+Bhopal">📍 Map</a></div>
+        <div class="card"><b>Sony Center</b> ⭐ 4.6<br>📍 Ashima Mall, Bhopal<br>🕒 10:00 AM - 9:30 PM<br><span class="tag">Bravia TV</span><span class="tag">PlayStation</span><span class="tag">Camera</span><br><a class="card-btn" href="tel:07554009800">📞 Call</a><a class="card-btn map-btn" href="https://maps.google.com/?q=Sony+Center+Ashima+Mall+Bhopal">📍 Map</a></div>
+        <div class="card"><b>Dell Exclusive Store</b> ⭐ 4.3<br>📍 New Market, Bhopal<br>🕒 10:30 AM - 8:30 PM<br><span class="tag">Laptop</span><span class="tag">Desktop</span><span class="tag">Monitor</span><br><a class="card-btn" href="tel:07554009900">📞 Call</a><a class="card-btn map-btn" href="https://maps.google.com/?q=Dell+Exclusive+Store+New+Market+Bhopal">📍 Map</a></div>
       `;
     }
   </script>
