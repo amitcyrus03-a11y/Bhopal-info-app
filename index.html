@@ -33,3 +33,230 @@
   <button class="btn" onclick="showSports()">⚽ Sports</button>
   <button class="btn" onclick="showMedical()">💊 Medical Store</button>
   <button class="btn" onclick="showAutoParts()">🔩 Auto Parts</button>
+  <button class="btn" onclick="showAutomobile()">🚗 Automobile</button>
+  <button class="btn" onclick="showServices()">🔧 Services</button>
+  <button class="btn" onclick="showFood()">🍕 Khana / Food</button>
+  <button class="btn" onclick="showRestaurant()">🍽️ Restaurant</button>
+  
+  <div id="list"></div>
+
+  <script>
+    function showSupermarket() {
+      document.getElementById('list').innerHTML = `
+        <div class="card">
+          <b>D Mart</b><br>
+          Groceries, Home, Kitchen - Sab kuch<br>
+          MP Nagar Zone-1, Bhopal<br>
+          <a href="tel:07554061300">Call Karein</a>
+        </div>
+        <div class="card">
+          <b>Reliance Smart Bazaar</b><br>
+          Groceries, Fashion, Electronics<br>
+          DB Mall, Arera Hills, Bhopal<br>
+          <a href="tel:18008910001">Call Karein</a>
+        </div>
+        <div class="card">
+          <b>Big Bazaar</b><br>
+          Hypermarket - Sab kuch ek jagah<br>
+          Ashima Mall, Hoshangabad Road<br>
+          <a href="tel:07556696000">Call Karein</a>
+        </div>
+      `;
+    }
+
+    function showCloth() {
+      document.getElementById('list').innerHTML = `
+        <div class="card">
+          <b>Raymond Showroom</b><br>
+          Company Outlet - Suit, Shirt, Fabric<br>
+          New Market, Bhopal<br>
+          <a href="tel:07554001234">Call Karein</a>
+        </div>
+        <div class="card">
+          <b>Peter England</b><br>
+          Branded Shirts, Trousers, Blazers<br>
+          DB Mall, Bhopal<br>
+          <a href="tel:07554004567">Call Karein</a>
+        </div>
+        <div class="card">
+          <b>Fabindia</b><br>
+          Ethnic Wear, Kurta, Saree<br>
+          10 No. Market, Arera Colony<br>
+          <a href="tel:07554007890">Call Karein</a>
+        </div>
+      `;
+    }
+
+    function showJewellery() {
+      document.getElementById('list').innerHTML = `
+        <div class="card">
+          <b>Tanishq Jewellery</b><br>
+          Gold, Diamond, Silver<br>
+          DB Mall, Bhopal<br>
+          <a href="tel:07554002345">Call Karein</a>
+        </div>
+        <div class="card">
+          <b>Kalyan Jewellers</b><br>
+          Bridal Jewellery, Gold Coins<br>
+          New Market, Bhopal<br>
+          <a href="tel:07554003456">Call Karein</a>
+        </div>
+      `;
+    }
+
+    function showShoes() {
+      document.getElementById('list').innerHTML = `
+        <div class="card">
+          <b>Bata Showroom</b><br>
+          Shoes, Sandals, School Shoes<br>
+          New Market, Bhopal<br>
+          <a href="tel:07554006789">Call Karein</a>
+        </div>
+        <div class="card">
+          <b>Red Chief</b><br>
+          Leather Shoes, Casual, Formal<br>
+          DB Mall, Bhopal<br>
+          <a href="tel:07554008901">Call Karein</a>
+        </div>
+      `;
+    }
+
+    function showSports() {
+      document.getElementById('list').innerHTML = `
+        <div class="card">
+          <b>Decathlon Sports</b><br>
+          Cricket, Football, Gym Equipment<br>
+          Ashima Mall, Hoshangabad Road<br>
+          <a href="tel:07554010101">Call Karein</a>
+        </div>
+        <div class="card">
+          <b>Sports Station</b><br>
+          Bat, Ball, Shoes, Tracksuit<br>
+          MP Nagar Zone-2, Bhopal<br>
+          <a href="tel:07554020202">Call Karein</a>
+        </div>
+      `;
+    }
+
+    function showMedical() {
+      document.getElementById('list').innerHTML = `
+        <div class="card">
+          <b>Apollo Pharmacy</b><br>
+          24x7 Medicine, Health Products<br>
+          MP Nagar, Bhopal<br>
+          <a href="tel:07554040404">Call Karein</a>
+        </div>
+        <div class="card">
+          <b>MedPlus</b><br>
+          All Medicine, Home Delivery<br>
+          Arera Colony, Bhopal<br>
+          <a href="tel:07554050505">Call Karein</a>
+        </div>
+      `;
+    }
+
+    function showAutoParts() {
+      document.getElementById('list').innerHTML = `
+        <div class="card">
+          <b>Bhopal Auto Parts</b><br>
+          Car Spare Parts, Engine Oil<br>
+          Hamidia Road, Bhopal<br>
+          <a href="tel:07554070707">Call Karein</a>
+        </div>
+        <div class="card">
+          <b>New Bharat Motors</b><br>
+          Bike Parts, Tyre, Battery<br>
+          Bairagarh, Bhopal<br>
+          <a href="tel:07554080808">Call Karein</a>
+        </div>
+      `;
+    }
+
+    function showAutomobile() {
+      document.getElementById('list').innerHTML = `
+        <div class="card">
+          <b>Maruti Suzuki Arena</b><br>
+          Car Showroom - Swift, Baleno, Brezza<br>
+          Hoshangabad Road, Bhopal<br>
+          <a href="tel:07554011223">Call Karein</a>
+        </div>
+        <div class="card">
+          <b>Hyundai Showroom</b><br>
+          Car Showroom - i20, Creta, Venue<br>
+          MP Nagar, Bhopal<br>
+          <a href="tel:07554022334">Call Karein</a>
+        </div>
+        <div class="card">
+          <b>Hero MotoCorp</b><br>
+          Two Wheeler - Splendor, Xtreme<br>
+          Hamidia Road, Bhopal<br>
+          <a href="tel:07554033445">Call Karein</a>
+        </div>
+      `;
+    }
+
+    function showServices() {
+      document.getElementById('list').innerHTML = `
+        <div class="card">
+          <b>Sharma AC Repair</b><br>
+          AC, Fridge, Washing Machine<br>
+          Kolar Road, Bhopal<br>
+          <a href="tel:9876543210">Call Karein</a>
+        </div>
+        <div class="card">
+          <b>City Cab Service</b><br>
+          24x7 Taxi, Airport Pickup<br>
+          Bhopal Station<br>
+          <a href="tel:9898989898">Call Karein</a>
+        </div>
+      `;
+    }
+
+    function showFood() {
+      document.getElementById('list').innerHTML = `
+        <div class="card">
+          <b>Manohar Dairy</b><br>
+          Poha, Jalebi, Sweets<br>
+          Hamidia Road, Bhopal<br>
+          <a href="tel:07552500001">Call Karein</a>
+        </div>
+        <div class="card">
+          <b>Sharma & Vishnu Fast Food</b><br>
+          Poha, Samosa, Kachori<br>
+          MP Nagar, Bhopal<br>
+          <a href="tel:07552500003">Call Karein</a>
+        </div>
+      `;
+    }
+
+    function showRestaurant() {
+      document.getElementById('list').innerHTML = `
+        <div class="card">
+          <b>Indian Coffee House</b><br>
+          South Indian, Coffee, Dosa<br>
+          New Market, Bhopal<br>
+          <a href="tel:07552500002">Call Karein</a>
+        </div>
+        <div class="card">
+          <b>Sagar Gaire Fast Food</b><br>
+          Chinese, Indian, Tandoor<br>
+          10 No. Market, Bhopal<br>
+          <a href="tel:07552500004">Call Karein</a>
+        </div>
+        <div class="card">
+          <b>Bapu Ki Kutia</b><br>
+          Veg Thali, Punjabi Food<br>
+          MP Nagar Zone-1, Bhopal<br>
+          <a href="tel:07552500005">Call Karein</a>
+        </div>
+        <div class="card">
+          <b>Zaika Restaurant</b><br>
+          Mughlai, Biryani, Non-Veg<br>
+          Hamidia Road, Bhopal<br>
+          <a href="tel:07552500006">Call Karein</a>
+        </div>
+      `;
+    }
+  </s</script>
+</bod</body>
+</htm</html>
