@@ -17,6 +17,7 @@
   <h1>Bhopal Info</h1>
   <a class="btn" onclick="showHospital()">🏥 Hospital</a>
   <a class="btn" onclick="showRent()">🏠 Rent Property</a>
+   <a class="btn" onclick="showDoctors()">Top Doctors</a>
   <div id="list"></div>
   <script>
     function showHospital() {
@@ -31,7 +32,55 @@
         </div>
       `;
     }
-    function showRent() {
+    
+function showDoctors() {
+  document.getElementById('list').innerHTML = `
+    <div class="card">
+      <b>Dr. R.K. Sharma</b><br>
+      Heart Specialist<br>
+      Bansal Hospital<br>
+      <a href="tel:07554000000">Call Karein</a>
+    </div>
+    <div class="card">
+      <b>Dr. Meena Gupta</b><br>
+      Child Specialist<br>
+      AIIMS Bhopal<br>
+      <a href="tel:07552900000">Call Karein</a>
+    </div>
+      `;
+  
+}
+
+function showRent() {
+  document.getElementById('list').innerHTML = `
+    <div class="card">
+      <b>2BHK Flat</b><br>
+      Area: MP Nagar<br>
+      <a href="tel:9876543210">Call Karein</a>
+    </div>
+  `;
+}
+  
+      
+      
+    <div class="card">
+      <b>Dr. Suresh Jain</b><br>
+      Bones Specialist<br>
+      Narmada Hospital<br>
+      <a href="tel:07554001234">Call Karein</a>
+    </div>
+  `;
+}
+
+function showRent() {
+  document.getElementById('list').innerHTML = `
+    <div class="card">
+      <b>2BHK Flat</b><br>
+      MP Nagar, Rent: 12,000/month<br>
+      <a href="tel:9876543210">Contact</a>
+    </div>
+  `;
+}
       document.getElementById('list').innerHTML = `
         <div class="card">
           <b>2BHK Flat</b><br>Area: MP Nagar<br>Rent: ₹12,000/month<br>
