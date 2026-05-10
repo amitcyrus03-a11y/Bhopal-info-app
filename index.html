@@ -1,0 +1,42 @@
+DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Bhopal Info</title>
+  <style>
+    body { font-family: sans-serif; text-align: center; padding: 20px; background: #f0f0f0; }
+    h1 { color: #0066cc; margin-bottom: 30px; }
+    .btn { display: block; margin: 15px auto; padding: 15px; width: 80%; background: #0066cc; color: white; border-radius: 10px; font-size: 18px; text-decoration: none; }
+    .card { background: white; padding: 15px; margin: 10px; border-radius: 8px; text-align: left; }
+  </style>
+</head>
+<body>
+  <h1>Bhopal Info</h1>
+  <a class="btn" onclick="showHospital()">🏥 Hospital</a>
+  <a class="btn" onclick="showRent()">🏠 Rent Property</a>
+  <div id="list"></div>
+  <script>
+    function showHospital() {
+      document.getElementById('list').innerHTML = `
+        <div class="card">
+          <b>Hamidia Hospital</b><br>Address: Royal Market<br>
+          <a href="tel:07554007000">📞 Call: 0755-4007000</a>
+        </div>
+        <div class="card">
+          <b>AIIMS Bhopal</b><br>Address: Saket Nagar<br>
+          <a href="tel:07552982800">📞 Call: 0755-2982800</a>
+        </div>
+      `;
+    }
+    function showRent() {
+      document.getElementById('list').innerHTML = `
+        <div class="card">
+          <b>2BHK Flat</b><br>Area: MP Nagar<br>Rent: ₹12,000/month<br>
+          <a href="tel:9876543210">📞 Call Owner</a>
+        </div>
+      `;
+    }
+  </script>
+</body>
+</html>
