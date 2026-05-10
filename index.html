@@ -7,36 +7,13 @@
   <style>
     body { font-family: Arial; margin: 0; padding: 10px; background: #f0f8ff; }
     h1 { text-align: center; color: #0066cc; margin: 10px 0 15px 0; }
-    
-    .btn-grid {
-      display: grid;
-      grid-template-columns: 1fr 1fr;
-      gap: 8px;
-      margin-bottom: 15px;
-    }
-    
-    .btn { 
-      width: 100%; padding: 14px 5px; margin: 0; 
-      background: #0066cc; color: white; border: none; 
-      border-radius: 8px; font-size: 14px; font-weight: bold;
-    }
-    
-    .card { 
-      background: white; padding: 15px; margin: 12px 0; 
-      border-radius: 8px; box-shadow: 0 2px 6px #ccc;
-      line-height: 1.6;
-    }
+    .btn-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 8px; margin-bottom: 15px; }
+    .btn { width: 100%; padding: 14px 5px; margin: 0; background: #0066cc; color: white; border: none; border-radius: 8px; font-size: 14px; font-weight: bold; }
+    .card { background: white; padding: 15px; margin: 12px 0; border-radius: 8px; box-shadow: 0 2px 6px #ccc; line-height: 1.6; }
     .card b { color: #0066cc; font-size: 18px; }
-    .card-btn { 
-      display: inline-block; margin: 8px 5px 0 0; padding: 8px 15px; 
-      background: #28a745; color: white; text-decoration: none; 
-      border-radius: 5px; font-size: 14px;
-    }
+    .card-btn { display: inline-block; margin: 8px 5px 0 0; padding: 8px 15px; background: #28a745; color: white; text-decoration: none; border-radius: 5px; font-size: 14px; }
     .map-btn { background: #dc3545; }
-    .tag { 
-      display: inline-block; background: #e7f3ff; color: #0066cc; 
-      padding: 3px 8px; border-radius: 12px; font-size: 12px; margin: 3px 3px 0;
-    }
+    .tag { display: inline-block; background: #e7f3ff; color: #0066cc; padding: 3px 8px; border-radius: 12px; font-size: 12px; margin: 3px 3px 0; }
   </style>
 </head>
 <body>
@@ -62,261 +39,177 @@
   <script>
     function showSupermarket() {
       document.getElementById('list').innerHTML = `
-        <div class="card">
-          <b>D Mart</b> ⭐ 4.4<br>
-          📍 MP Nagar Zone-1, Near Jyoti Cineplex, Bhopal<br>
-          🕒 7:30 AM - 10:30 PM<br>
-          <span class="tag">Groceries</span><span class="tag">Home</span><span class="tag">Kitchen</span><span class="tag">Parking</span><br>
-          <a class="card-btn" href="tel:07554061300">📞 Call</a>
-          <a class="card-btn map-btn" href="https://maps.google.com/?q=D+Mart+MP+Nagar+Bhopal">📍 Map</a>
-        </div>
-        <div class="card">
-          <b>Reliance Smart Bazaar</b> ⭐ 4.2<br>
-          📍 DB City Mall, Arera Hills, Bhopal<br>
-          🕒 8:00 AM - 10:00 PM<br>
-          <span class="tag">Groceries</span><span class="tag">Fashion</span><span class="tag">Electronics</span><span class="tag">AC</span><br>
-          <a class="card-btn" href="tel:18008910001">📞 Call</a>
-          <a class="card-btn map-btn" href="https://maps.google.com/?q=Reliance+Smart+DB+Mall+Bhopal">📍 Map</a>
-        </div>
-        <div class="card">
-          <b>Big Bazaar</b> ⭐ 4.0<br>
-          📍 Ashima Mall, Hoshangabad Road, Bhopal<br>
-          🕒 9:00 AM - 10:00 PM<br>
-          <span class="tag">Hypermarket</span><span class="tag">Food Court</span><span class="tag">Parking</span><br>
-          <a class="card-btn" href="tel:07556696000">📞 Call</a>
-          <a class="card-btn map-btn" href="https://maps.google.com/?q=Big+Bazaar+Ashima+Mall+Bhopal">📍 Map</a>
-        </div>
+        <div class="card"><b>D Mart</b> ⭐ 4.4<br>📍 MP Nagar Zone-1, Near Jyoti Cineplex<br>🕒 7:30 AM - 10:30 PM<br><span class="tag">Groceries</span><span class="tag">Parking</span><br><a class="card-btn" href="tel:07554061300">📞 Call</a><a class="card-btn map-btn" href="https://maps.google.com/?q=D+Mart+MP+Nagar+Bhopal">📍 Map</a></div>
+        <div class="card"><b>Reliance Smart Bazaar</b> ⭐ 4.2<br>📍 DB City Mall, Arera Hills<br>🕒 8:00 AM - 10:00 PM<br><span class="tag">Fashion</span><span class="tag">AC</span><br><a class="card-btn" href="tel:18008910001">📞 Call</a><a class="card-btn map-btn" href="https://maps.google.com/?q=Reliance+Smart+DB+Mall+Bhopal">📍 Map</a></div>
+        <div class="card"><b>Big Bazaar</b> ⭐ 4.0<br>📍 Ashima Mall, Hoshangabad Road<br>🕒 9:00 AM - 10:00 PM<br><span class="tag">Hypermarket</span><span class="tag">Food Court</span><br><a class="card-btn" href="tel:07556696000">📞 Call</a><a class="card-btn map-btn" href="https://maps.google.com/?q=Big+Bazaar+Ashima+Mall+Bhopal">📍 Map</a></div>
+        <div class="card"><b>More Supermarket</b> ⭐ 4.1<br>📍 10 No. Market, Arera Colony<br>🕒 8:00 AM - 10:00 PM<br><span class="tag">Vegetables</span><span class="tag">Dairy</span><br><a class="card-btn" href="tel:07554008800">📞 Call</a><a class="card-btn map-btn" href="https://maps.google.com/?q=More+Supermarket+10+No+Market+Bhopal">📍 Map</a></div>
+        <div class="card"><b>Easyday Club</b> ⭐ 4.0<br>📍 Kolar Road, Bhopal<br>🕒 8:30 AM - 9:30 PM<br><span class="tag">Membership</span><span class="tag">Discount</span><br><a class="card-btn" href="tel:07554007700">📞 Call</a><a class="card-btn map-btn" href="https://maps.google.com/?q=Easyday+Kolar+Road+Bhopal">📍 Map</a></div>
+        <div class="card"><b>Spencer's</b> ⭐ 3.9<br>📍 DB City Mall, Bhopal<br>🕒 9:00 AM - 10:00 PM<br><span class="tag">Imported</span><span class="tag">Gourmet</span><br><a class="card-btn" href="tel:07554006600">📞 Call</a><a class="card-btn map-btn" href="https://maps.google.com/?q=Spencers+DB+Mall+Bhopal">📍 Map</a></div>
+        <div class="card"><b>Vishal Mega Mart</b> ⭐ 4.0<br>📍 Hoshangabad Road, Bhopal<br>🕒 9:00 AM - 9:30 PM<br><span class="tag">Clothing</span><span class="tag">Household</span><br><a class="card-btn" href="tel:07554005500">📞 Call</a><a class="card-btn map-btn" href="https://maps.google.com/?q=Vishal+Mega+Mart+Hoshangabad+Road+Bhopal">📍 Map</a></div>
+        <div class="card"><b>Metro Cash & Carry</b> ⭐ 4.3<br>📍 Ayodhya Bypass, Bhopal<br>🕒 6:00 AM - 10:00 PM<br><span class="tag">Wholesale</span><span class="tag">B2B</span><br><a class="card-btn" href="tel:07554004400">📞 Call</a><a class="card-btn map-btn" href="https://maps.google.com/?q=Metro+Cash+Carry+Ayodhya+Bypass+Bhopal">📍 Map</a></div>
+        <div class="card"><b>Apna Bazaar</b> ⭐ 4.1<br>📍 New Market, TT Nagar<br>🕒 9:00 AM - 9:00 PM<br><span class="tag">Local</span><span class="tag">Fresh</span><br><a class="card-btn" href="tel:07554003300">📞 Call</a><a class="card-btn map-btn" href="https://maps.google.com/?q=Apna+Bazaar+New+Market+Bhopal">📍 Map</a></div>
+        <div class="card"><b>6Ten Store</b> ⭐ 4.2<br>📍 MP Nagar Zone-2<br>🕒 8:00 AM - 11:00 PM<br><span class="tag">24x7</span><span class="tag">Snacks</span><br><a class="card-btn" href="tel:07554002200">📞 Call</a><a class="card-btn map-btn" href="https://maps.google.com/?q=6Ten+MP+Nagar+Bhopal">📍 Map</a></div>
       `;
     }
 
     function showCloth() {
       document.getElementById('list').innerHTML = `
-        <div class="card">
-          <b>Raymond Showroom</b> ⭐ 4.5<br>
-          📍 New Market, TT Nagar, Bhopal<br>
-          🕒 10:30 AM - 9:00 PM<br>
-          <span class="tag">Suiting</span><span class="tag">Shirting</span><span class="tag">Alteration</span><br>
-          <a class="card-btn" href="tel:07554001234">📞 Call</a>
-          <a class="card-btn map-btn" href="https://maps.google.com/?q=Raymond+New+Market+Bhopal">📍 Map</a>
-        </div>
-        <div class="card">
-          <b>Peter England</b> ⭐ 4.3<br>
-          📍 DB City Mall, Ground Floor, Bhopal<br>
-          🕒 10:00 AM - 10:00 PM<br>
-          <span class="tag">Formals</span><span class="tag">Casuals</span><span class="tag">AC</span><br>
-          <a class="card-btn" href="tel:07554004567">📞 Call</a>
-          <a class="card-btn map-btn" href="https://maps.google.com/?q=Peter+England+DB+Mall+Bhopal">📍 Map</a>
-        </div>
-        <div class="card">
-          <b>Fabindia</b> ⭐ 4.6<br>
-          📍 10 No. Market, Arera Colony, Bhopal<br>
-          🕒 11:00 AM - 8:30 PM<br>
-          <span class="tag">Ethnic</span><span class="tag">Handloom</span><span class="tag">Organic</span><br>
-          <a class="card-btn" href="tel:07554007890">📞 Call</a>
-          <a class="card-btn map-btn" href="https://maps.google.com/?q=Fabindia+10+No+Market+Bhopal">📍 Map</a>
-        </div>
+        <div class="card"><b>Raymond Showroom</b> ⭐ 4.5<br>📍 New Market, TT Nagar<br>🕒 10:30 AM - 9:00 PM<br><span class="tag">Suiting</span><span class="tag">Alteration</span><br><a class="card-btn" href="tel:07554001234">📞 Call</a><a class="card-btn map-btn" href="https://maps.google.com/?q=Raymond+New+Market+Bhopal">📍 Map</a></div>
+        <div class="card"><b>Peter England</b> ⭐ 4.3<br>📍 DB City Mall, Ground Floor<br>🕒 10:00 AM - 10:00 PM<br><span class="tag">Formals</span><span class="tag">AC</span><br><a class="card-btn" href="tel:07554004567">📞 Call</a><a class="card-btn map-btn" href="https://maps.google.com/?q=Peter+England+DB+Mall+Bhopal">📍 Map</a></div>
+        <div class="card"><b>Fabindia</b> ⭐ 4.6<br>📍 10 No. Market, Arera Colony<br>🕒 11:00 AM - 8:30 PM<br><span class="tag">Ethnic</span><span class="tag">Handloom</span><br><a class="card-btn" href="tel:07554007890">📞 Call</a><a class="card-btn map-btn" href="https://maps.google.com/?q=Fabindia+10+No+Market+Bhopal">📍 Map</a></div>
+        <div class="card"><b>Van Heusen</b> ⭐ 4.4<br>📍 DB City Mall, First Floor<br>🕒 10:00 AM - 10:00 PM<br><span class="tag">Premium</span><span class="tag">Formal Wear</span><br><a class="card-btn" href="tel:07554001200">📞 Call</a><a class="card-btn map-btn" href="https://maps.google.com/?q=Van+Heusen+DB+Mall+Bhopal">📍 Map</a></div>
+        <div class="card"><b>Allen Solly</b> ⭐ 4.3<br>📍 Ashima Mall, Hoshangabad Road<br>🕒 10:00 AM - 9:30 PM<br><span class="tag">Smart Casual</span><span class="tag">Chinos</span><br><a class="card-btn" href="tel:07554001300">📞 Call</a><a class="card-btn map-btn" href="https://maps.google.com/?q=Allen+Solly+Ashima+Mall+Bhopal">📍 Map</a></div>
+        <div class="card"><b>Louis Philippe</b> ⭐ 4.5<br>📍 New Market, Bhopal<br>🕒 10:30 AM - 9:00 PM<br><span class="tag">Luxury</span><span class="tag">Suits</span><br><a class="card-btn" href="tel:07554001400">📞 Call</a><a class="card-btn map-btn" href="https://maps.google.com/?q=Louis+Philippe+New+Market+Bhopal">📍 Map</a></div>
+        <div class="card"><b>Pantaloons</b> ⭐ 4.2<br>📍 DB City Mall, Bhopal<br>🕒 10:00 AM - 10:00 PM<br><span class="tag">Family Store</span><span class="tag">All Brands</span><br><a class="card-btn" href="tel:07554001500">📞 Call</a><a class="card-btn map-btn" href="https://maps.google.com/?q=Pantaloons+DB+Mall+Bhopal">📍 Map</a></div>
+        <div class="card"><b>Westside</b> ⭐ 4.4<br>📍 Ashima Mall, Bhopal<br>🕒 10:00 AM - 9:30 PM<br><span class="tag">Trendy</span><span class="tag">House Brand</span><br><a class="card-btn" href="tel:07554001600">📞 Call</a><a class="card-btn map-btn" href="https://maps.google.com/?q=Westside+Ashima+Mall+Bhopal">📍 Map</a></div>
+        <div class="card"><b>Zudio</b> ⭐ 4.3<br>📍 10 No. Market, Bhopal<br>🕒 10:00 AM - 9:00 PM<br><span class="tag">Budget</span><span class="tag">Fashion</span><br><a class="card-btn" href="tel:07554001700">📞 Call</a><a class="card-btn map-btn" href="https://maps.google.com/?q=Zudio+10+No+Market+Bhopal">📍 Map</a></div>
+        <div class="card"><b>Manyavar</b> ⭐ 4.6<br>📍 New Market, Bhopal<br>🕒 10:30 AM - 9:00 PM<br><span class="tag">Wedding</span><span class="tag">Sherwani</span><br><a class="card-btn" href="tel:07554001800">📞 Call</a><a class="card-btn map-btn" href="https://maps.google.com/?q=Manyavar+New+Market+Bhopal">📍 Map</a></div>
       `;
     }
 
     function showJewellery() {
       document.getElementById('list').innerHTML = `
-        <div class="card">
-          <b>Tanishq Jewellery</b> ⭐ 4.7<br>
-          📍 DB City Mall, First Floor, Bhopal<br>
-          🕒 11:00 AM - 9:00 PM<br>
-          <span class="tag">Gold</span><span class="tag">Diamond</span><span class="tag">Hallmark</span><br>
-          <a class="card-btn" href="tel:07554002345">📞 Call</a>
-          <a class="card-btn map-btn" href="https://maps.google.com/?q=Tanishq+DB+Mall+Bhopal">📍 Map</a>
-        </div>
-        <div class="card">
-          <b>Kalyan Jewellers</b> ⭐ 4.5<br>
-          📍 New Market, Near Rang Mahal, Bhopal<br>
-          🕒 10:30 AM - 8:30 PM<br>
-          <span class="tag">Bridal</span><span class="tag">Gold Coins</span><span class="tag">EMI</span><br>
-          <a class="card-btn" href="tel:07554003456">📞 Call</a>
-          <a class="card-btn map-btn" href="https://maps.google.com/?q=Kalyan+Jewellers+New+Market+Bhopal">📍 Map</a>
-        </div>
+        <div class="card"><b>Tanishq Jewellery</b> ⭐ 4.7<br>📍 DB City Mall, First Floor<br>🕒 11:00 AM - 9:00 PM<br><span class="tag">Gold</span><span class="tag">Diamond</span><span class="tag">Hallmark</span><br><a class="card-btn" href="tel:07554002345">📞 Call</a><a class="card-btn map-btn" href="https://maps.google.com/?q=Tanishq+DB+Mall+Bhopal">📍 Map</a></div>
+        <div class="card"><b>Kalyan Jewellers</b> ⭐ 4.5<br>📍 New Market, Near Rang Mahal<br>🕒 10:30 AM - 8:30 PM<br><span class="tag">Bridal</span><span class="tag">EMI</span><br><a class="card-btn" href="tel:07554003456">📞 Call</a><a class="card-btn map-btn" href="https://maps.google.com/?q=Kalyan+Jewellers+New+Market+Bhopal">📍 Map</a></div>
+        <div class="card"><b>Malabar Gold</b> ⭐ 4.6<br>📍 MP Nagar Zone-1<br>🕒 10:30 AM - 9:00 PM<br><span class="tag">22K Gold</span><span class="tag">Platinum</span><br><a class="card-btn" href="tel:07554002100">📞 Call</a><a class="card-btn map-btn" href="https://maps.google.com/?q=Malabar+Gold+MP+Nagar+Bhopal">📍 Map</a></div>
+        <div class="card"><b>PC Jeweller</b> ⭐ 4.3<br>📍 10 No. Market, Bhopal<br>🕒 10:30 AM - 8:30 PM<br><span class="tag">Silver</span><span class="tag">Coins</span><br><a class="card-btn" href="tel:07554002200">📞 Call</a><a class="card-btn map-btn" href="https://maps.google.com/?q=PC+Jeweller+10+No+Market+Bhopal">📍 Map</a></div>
+        <div class="card"><b>Joyalukkas</b> ⭐ 4.4<br>📍 DB City Mall, Bhopal<br>🕒 11:00 AM - 9:00 PM<br><span class="tag">Traditional</span><span class="tag">Temple Design</span><br><a class="card-btn" href="tel:07554002300">📞 Call</a><a class="card-btn map-btn" href="https://maps.google.com/?q=Joyalukkas+DB+Mall+Bhopal">📍 Map</a></div>
+        <div class="card"><b>Khimji Jewellers</b> ⭐ 4.5<br>📍 Hamidia Road, Old City<br>🕒 10:00 AM - 8:00 PM<br><span class="tag">Old Bhopal</span><span class="tag">Trust</span><br><a class="card-btn" href="tel:07554002400">📞 Call</a><a class="card-btn map-btn" href="https://maps.google.com/?q=Khimji+Jewellers+Hamidia+Road+Bhopal">📍 Map</a></div>
+        <div class="card"><b>Reliance Jewels</b> ⭐ 4.2<br>📍 Ashima Mall, Bhopal<br>🕒 10:00 AM - 9:30 PM<br><span class="tag">Lightweight</span><span class="tag">Daily Wear</span><br><a class="card-btn" href="tel:07554002500">📞 Call</a><a class="card-btn map-btn" href="https://maps.google.com/?q=Reliance+Jewels+Ashima+Mall+Bhopal">📍 Map</a></div>
+        <div class="card"><b>TBZ The Original</b> ⭐ 4.6<br>📍 New Market, Bhopal<br>🕒 10:30 AM - 8:30 PM<br><span class="tag">Heritage</span><span class="tag">Antique</span><br><a class="card-btn" href="tel:07554002600">📞 Call</a><a class="card-btn map-btn" href="https://maps.google.com/?q=TBZ+New+Market+Bhopal">📍 Map</a></div>
+        <div class="card"><b>CaratLane</b> ⭐ 4.5<br>📍 DB City Mall, Bhopal<br>🕒 11:00 AM - 9:00 PM<br><span class="tag">Modern</span><span class="tag">Solitaire</span><br><a class="card-btn" href="tel:07554002700">📞 Call</a><a class="card-btn map-btn" href="https://maps.google.com/?q=CaratLane+DB+Mall+Bhopal">📍 Map</a></div>
+        <div class="card"><b>Shri Hari Jewellers</b> ⭐ 4.4<br>📍 Chowk Bazaar, Bhopal<br>🕒 10:00 AM - 8:00 PM<br><span class="tag">Local</span><span class="tag">Custom Made</span><br><a class="card-btn" href="tel:07554002800">📞 Call</a><a class="card-btn map-btn" href="https://maps.google.com/?q=Shri+Hari+Jewellers+Chowk+Bhopal">📍 Map</a></div>
       `;
     }
 
     function showShoes() {
       document.getElementById('list').innerHTML = `
-        <div class="card">
-          <b>Bata Showroom</b> ⭐ 4.2<br>
-          📍 New Market, Main Road, Bhopal<br>
-          🕒 10:00 AM - 9:00 PM<br>
-          <span class="tag">Formal</span><span class="tag">Casual</span><span class="tag">School Shoes</span><br>
-          <a class="card-btn" href="tel:07554006789">📞 Call</a>
-          <a class="card-btn map-btn" href="https://maps.google.com/?q=Bata+New+Market+Bhopal">📍 Map</a>
-        </div>
-        <div class="card">
-          <b>Red Chief</b> ⭐ 4.4<br>
-          📍 DB City Mall, Bhopal<br>
-          🕒 10:00 AM - 10:00 PM<br>
-          <span class="tag">Leather</span><span class="tag">Rugged</span><span class="tag">AC</span><br>
-          <a class="card-btn" href="tel:07554008901">📞 Call</a>
-          <a class="card-btn map-btn" href="https://maps.google.com/?q=Red+Chief+DB+Mall+Bhopal">📍 Map</a>
-        </div>
+        <div class="card"><b>Bata Showroom</b> ⭐ 4.2<br>📍 New Market, Main Road<br>🕒 10:00 AM - 9:00 PM<br><span class="tag">Formal</span><span class="tag">School Shoes</span><br><a class="card-btn" href="tel:07554006789">📞 Call</a><a class="card-btn map-btn" href="https://maps.google.com/?q=Bata+New+Market+Bhopal">📍 Map</a></div>
+        <div class="card"><b>Red Chief</b> ⭐ 4.4<br>📍 DB City Mall<br>🕒 10:00 AM - 10:00 PM<br><span class="tag">Leather</span><span class="tag">Rugged</span><br><a class="card-btn" href="tel:07554008901">📞 Call</a><a class="card-btn map-btn" href="https://maps.google.com/?q=Red+Chief+DB+Mall+Bhopal">📍 Map</a></div>
+        <div class="card"><b>Woodland</b> ⭐ 4.3<br>📍 Ashima Mall, Bhopal<br>🕒 10:00 AM - 9:30 PM<br><span class="tag">Outdoor</span><span class="tag">Trekking</span><br><a class="card-btn" href="tel:07554003100">📞 Call</a><a class="card-btn map-btn" href="https://maps.google.com/?q=Woodland+Ashima+Mall+Bhopal">📍 Map</a></div>
+        <div class="card"><b>Nike Store</b> ⭐ 4.6<br>📍 DB City Mall, Bhopal<br>🕒 10:00 AM - 10:00 PM<br><span class="tag">Sports</span><span class="tag">Sneakers</span><br><a class="card-btn" href="tel:07554003200">📞 Call</a><a class="card-btn map-btn" href="https://maps.google.com/?q=Nike+DB+Mall+Bhopal">📍 Map</a></div>
+        <div class="card"><b>Adidas</b> ⭐ 4.5<br>📍 10 No. Market, Bhopal<br>🕒 10:00 AM - 9:00 PM<br><span class="tag">Running</span><span class="tag">Football</span><br><a class="card-btn" href="tel:07554003300">📞 Call</a><a class="card-btn map-btn" href="https://maps.google.com/?q=Adidas+10+No+Market+Bhopal">📍 Map</a></div>
+        <div class="card"><b>Puma</b> ⭐ 4.4<br>📍 DB City Mall, Bhopal<br>🕒 10:00 AM - 10:00 PM<br><span class="tag">Lifestyle</span><span class="tag">Casual</span><br><a class="card-btn" href="tel:07554003400">📞 Call</a><a class="card-btn map-btn" href="https://maps.google.com/?q=Puma+DB+Mall+Bhopal">📍 Map</a></div>
+        <div class="card"><b>Relaxo</b> ⭐ 4.0<br>📍 New Market, Bhopal<br>🕒 10:00 AM - 9:00 PM<br><span class="tag">Slippers</span><span class="tag">Budget</span><br><a class="card-btn" href="tel:07554003500">📞 Call</a><a class="card-btn map-btn" href="https://maps.google.com/?q=Relaxo+New+Market+Bhopal">📍 Map</a></div>
+        <div class="card"><b>Skechers</b> ⭐ 4.5<br>📍 Ashima Mall, Bhopal<br>🕒 10:00 AM - 9:30 PM<br><span class="tag">Comfort</span><span class="tag">Walking</span><br><a class="card-btn" href="tel:07554003600">📞 Call</a><a class="card-btn map-btn" href="https://maps.google.com/?q=Skechers+Ashima+Mall+Bhopal">📍 Map</a></div>
+        <div class="card"><b>Metro Shoes</b> ⭐ 4.2<br>📍 MP Nagar, Bhopal<br>🕒 10:30 AM - 9:00 PM<br><span class="tag">Ladies</span><span class="tag">Party Wear</span><br><a class="card-btn" href="tel:07554003700">📞 Call</a><a class="card-btn map-btn" href="https://maps.google.com/?q=Metro+Shoes+MP+Nagar+Bhopal">📍 Map</a></div>
+        <div class="card"><b>Liberty</b> ⭐ 4.1<br>📍 Hamidia Road, Bhopal<br>🕒 10:00 AM - 8:30 PM<br><span class="tag">School</span><span class="tag">Office</span><br><a class="card-btn" href="tel:07554003800">📞 Call</a><a class="card-btn map-btn" href="https://maps.google.com/?q=Liberty+Hamidia+Road+Bhopal">📍 Map</a></div>
       `;
     }
 
     function showSports() {
       document.getElementById('list').innerHTML = `
-        <div class="card">
-          <b>Decathlon Sports</b> ⭐ 4.6<br>
-          📍 Ashima Mall, Hoshangabad Road, Bhopal<br>
-          🕒 9:00 AM - 10:00 PM<br>
-          <span class="tag">Cricket</span><span class="tag">Football</span><span class="tag">Gym</span><span class="tag">Trial Zone</span><br>
-          <a class="card-btn" href="tel:07554010101">📞 Call</a>
-          <a class="card-btn map-btn" href="https://maps.google.com/?q=Decathlon+Ashima+Mall+Bhopal">📍 Map</a>
-        </div>
+        <div class="card"><b>Decathlon Sports</b> ⭐ 4.6<br>📍 Ashima Mall, Hoshangabad Road<br>🕒 9:00 AM - 10:00 PM<br><span class="tag">Cricket</span><span class="tag">Football</span><span class="tag">Trial Zone</span><br><a class="card-btn" href="tel:07554010101">📞 Call</a><a class="card-btn map-btn" href="https://maps.google.com/?q=Decathlon+Ashima+Mall+Bhopal">📍 Map</a></div>
+        <div class="card"><b>SS Sports</b> ⭐ 4.3<br>📍 New Market, Bhopal<br>🕒 10:00 AM - 9:00 PM<br><span class="tag">Cricket Bat</span><span class="tag">Kit</span><br><a class="card-btn" href="tel:07554004100">📞 Call</a><a class="card-btn map-btn" href="https://maps.google.com/?q=SS+Sports+New+Market+Bhopal">📍 Map</a></div>
+        <div class="card"><b>SG Sports</b> ⭐ 4.4<br>📍 MP Nagar, Bhopal<br>🕒 10:00 AM - 8:30 PM<br><span class="tag">Cricket</span><span class="tag">Professional</span><br><a class="card-btn" href="tel:07554004200">📞 Call</a><a class="card-btn map-btn" href="https://maps.google.com/?q=SG+Sports+MP+Nagar+Bhopal">📍 Map</a></div>
+        <div class="card"><b>Yonex Exclusive</b> ⭐ 4.5<br>📍 10 No. Market, Bhopal<br>🕒 11:00 AM - 8:00 PM<br><span class="tag">Badminton</span><span class="tag">Racket</span><br><a class="card-btn" href="tel:07554004300">📞 Call</a><a class="card-btn map-btn" href="https://maps.google.com/?q=Yonex+10+No+Market+Bhopal">📍 Map</a></div>
+        <div class="card"><b>Cosco Sports</b> ⭐ 4.2<br>📍 Hamidia Road, Bhopal<br>🕒 10:00 AM - 8:00 PM<br><span class="tag">Football</span><span class="tag">Volleyball</span><br><a class="card-btn" href="tel:07554004400">📞 Call</a><a class="card-btn map-btn" href="https://maps.google.com/?q=Cosco+Sports+Hamidia+Road+Bhopal">📍 Map</a></div>
+        <div class="card"><b>Stag Sports</b> ⭐ 4.1<br>📍 Chowk Bazaar, Bhopal<br>🕒 10:00 AM - 8:00 PM<br><span class="tag">Table Tennis</span><span class="tag">TT Table</span><br><a class="card-btn" href="tel:07554004500">📞 Call</a><a class="card-btn map-btn" href="https://maps.google.com/?q=Stag+Sports+Chowk+Bhopal">📍 Map</a></div>
+        <div class="card"><b>Nivia Store</b> ⭐ 4.3<br>📍 DB City Mall, Bhopal<br>🕒 10:00 AM - 10:00 PM<br><span class="tag">Football</span><span class="tag">Shoes</span><br><a class="card-btn" href="tel:07554004600">📞 Call</a><a class="card-btn map-btn" href="https://maps.google.com/?q=Nivia+DB+Mall+Bhopal">📍 Map</a></div>
+        <div class="card"><b>Vector X</b> ⭐ 4.0<br>📍 Kolar Road, Bhopal<br>🕒 10:00 AM - 8:30 PM<br><span class="tag">Gym</span><span class="tag">Fitness</span><br><a class="card-btn" href="tel:07554004700">📞 Call</a><a class="card-btn map-btn" href="https://maps.google.com/?q=Vector+X+Kolar+Road+Bhopal">📍 Map</a></div>
+        <div class="card"><b>Khel India</b> ⭐ 4.2<br>📍 TT Nagar, Bhopal<br>🕒 10:00 AM - 9:00 PM<br><span class="tag">All Sports</span><span class="tag">Equipment</span><br><a class="card-btn" href="tel:07554004800">📞 Call</a><a class="card-btn map-btn" href="https://maps.google.com/?q=Khel+India+TT+Nagar+Bhopal">📍 Map</a></div>
+        <div class="card"><b>Spartan Sports</b> ⭐ 4.4<br>📍 Arera Colony, Bhopal<br>🕒 10:30 AM - 8:30 PM<br><span class="tag">Cricket</span><span class="tag">Custom Bat</span><br><a class="card-btn" href="tel:07554004900">📞 Call</a><a class="card-btn map-btn" href="https://maps.google.com/?q=Spartan+Sports+Arera+Colony+Bhopal">📍 Map</a></div>
       `;
     }
 
     function showMedical() {
       document.getElementById('list').innerHTML = `
-        <div class="card">
-          <b>Apollo Pharmacy</b> ⭐ 4.3<br>
-          📍 MP Nagar Zone-1, Bhopal<br>
-          🕒 24 Hours Open<br>
-          <span class="tag">24x7</span><span class="tag">Home Delivery</span><span class="tag">All Medicine</span><br>
-          <a class="card-btn" href="tel:07554040404">📞 Call</a>
-          <a class="card-btn map-btn" href="https://maps.google.com/?q=Apollo+Pharmacy+MP+Nagar+Bhopal">📍 Map</a>
-        </div>
-      `;
-    }
-
+        <div class="card"><b>Apollo Pharmacy</b> ⭐ 4.3<br>📍 MP Nagar Zone-1<br>🕒 24 Hours Open<br><span class="tag">24x7</span><span class="tag">Home Delivery</span><br><a class="card-btn" href="tel:07554040404">📞 Call</a><a class="card-btn map-btn" href="https://maps.google.com/?q=Apollo+Pharmacy+MP+Nagar+Bhopal">📍 Map</a></div>
+        <div class="card"><b>MedPlus</b> ⭐ 4.2<br>📍 10 No. Market, Bhopal<br>🕒 8:00 AM - 11:00 PM<br><span class="tag">Discount</span><span class="tag">Generic</span><br><a class="card-btn" href="tel:07554005100">📞 Call</a><a class="card-btn map-btn" href="https://maps.google.com/?q=MedPlus+10+No+Market+Bhopal">📍 Map</a></div>
+        <div class="card"><b>Guardian Pharmacy</b> ⭐ 4.1<br>📍 New Market, Bhopal<br>🕒 9:00 AM - 10:00 PM<br><span class="tag">Imported</span><span class="tag">Surgical</span><br><a class="card-btn" href="tel:07554005200">📞 Call</a><a class="card-btn map-btn" href="https://maps.google.com/?q=Guardian+Pharmacy+New+Market+Bhopal">📍 Map</a></div>
+        <div class="card"><b>Frank Ross Pharmacy</b> ⭐ 4.0<br>📍 Hamidia Road, Bhopal<br>🕒 9:00 AM - 9:00 PM<br><span class="tag">Old Bhopal</span><span class="tag">Ayurvedic</span><br><a class="card-btn" href="tel:07554005300">📞 Call</a><a class="card-btn map-btn" href="https://maps.google.com/?q=Frank+Ross+Hamidia+Road+Bhopal">📍 Map</a></div>
+        <div class="card"><b>Netmeds Store</b> ⭐ 4.3<br>📍 DB City Mall, Bhopal<br>🕒 10:00 AM - 10:00 PM<br><span class="tag">Online Order</span><span class="tag">Lab Test</span><br><a class="card-btn" href="tel:07554005400">📞 Call</a><a class="card-btn map-btn" href="https://maps.google.com/?q=Netmeds+DB+Mall+Bhopal">📍 Map</a></div>
+        <div class="
+        
     function showAutoParts() {
       document.getElementById('list').innerHTML = `
-        <div class="card">
-          <b>Bhopal Auto Parts</b> ⭐ 4.1<br>
-          📍 Hamidia Road, Old City, Bhopal<br>
-          🕒 9:00 AM - 8:00 PM<br>
-          <span class="tag">Car Parts</span><span class="tag">Engine Oil</span><span class="tag">Wholesale</span><br>
-          <a class="card-btn" href="tel:07554070707">📞 Call</a>
-          <a class="card-btn map-btn" href="https://maps.google.com/?q=Hamidia+Road+Auto+Parts+Bhopal">📍 Map</a>
-        </div>
+        <div class="card"><b>Bhopal Auto Parts</b> ⭐ 4.1<br>📍 Hamidia Road, Old City<br>🕒 9:00 AM - 8:00 PM<br><span class="tag">Car Parts</span><span class="tag">Engine Oil</span><span class="tag">Wholesale</span><br><a class="card-btn" href="tel:07554070707">📞 Call</a><a class="card-btn map-btn" href="https://maps.google.com/?q=Hamidia+Road+Auto+Parts+Bhopal">📍 Map</a></div>
+        <div class="card"><b>MP Auto Spares</b> ⭐ 4.3<br>📍 MP Nagar Zone-1<br>🕒 9:30 AM - 8:00 PM<br><span class="tag">Genuine</span><span class="tag">Maruti</span><span class="tag">Hyundai</span><br><a class="card-btn" href="tel:07554007100">📞 Call</a><a class="card-btn map-btn" href="https://maps.google.com/?q=MP+Auto+Spares+MP+Nagar+Bhopal">📍 Map</a></div>
+        <div class="card"><b>New Bharat Motors</b> ⭐ 4.2<br>📍 Hoshangabad Road<br>🕒 10:00 AM - 7:30 PM<br><span class="tag">Bike Parts</span><span class="tag">Bajaj</span><span class="tag">Hero</span><br><a class="card-btn" href="tel:07554007200">📞 Call</a><a class="card-btn map-btn" href="https://maps.google.com/?q=New+Bharat+Motors+Hoshangabad+Road+Bhopal">📍 Map</a></div>
+        <div class="card"><b>Sharma Auto Parts</b> ⭐ 4.0<br>📍 Chowk Bazaar, Bhopal<br>🕒 9:00 AM - 8:00 PM<br><span class="tag">Truck</span><span class="tag">Tractor</span><br><a class="card-btn" href="tel:07554007300">📞 Call</a><a class="card-btn map-btn" href="https://maps.google.com/?q=Sharma+Auto+Parts+Chowk+Bhopal">📍 Map</a></div>
+        <div class="card"><b>City Motors Parts</b> ⭐ 4.4<br>📍 Ayodhya Bypass<br>🕒 9:00 AM - 8:00 PM<br><span class="tag">Commercial</span><span class="tag">Heavy Vehicle</span><br><a class="card-btn" href="tel:07554007400">📞 Call</a><a class="card-btn map-btn" href="https://maps.google.com/?q=City+Motors+Ayodhya+Bypass+Bhopal">📍 Map</a></div>
+        <div class="card"><b>Reliance Autozone</b> ⭐ 4.3<br>📍 Kolar Road, Bhopal<br>🕒 9:30 AM - 8:00 PM<br><span class="tag">Battery</span><span class="tag">Tyres</span><span class="tag">Accessories</span><br><a class="card-btn" href="tel:07554007500">📞 Call</a><a class="card-btn map-btn" href="https://maps.google.com/?q=Reliance+Autozone+Kolar+Road+Bhopal">📍 Map</a></div>
+        <div class="card"><b>Bosch Car Service</b> ⭐ 4.5<br>📍 Arera Colony, Bhopal<br>🕒 9:00 AM - 7:00 PM<br><span class="tag">German Parts</span><span class="tag">AC Parts</span><br><a class="card-btn" href="tel:07554007600">📞 Call</a><a class="card-btn map-btn" href="https://maps.google.com/?q=Bosch+Car+Service+Arera+Colony+Bhopal">📍 Map</a></div>
+        <div class="card"><b>Gupta Auto Electric</b> ⭐ 4.2<br>📍 TT Nagar, Bhopal<br>🕒 10:00 AM - 8:00 PM<br><span class="tag">Wiring</span><span class="tag">Starter</span><span class="tag">Alternator</span><br><a class="card-btn" href="tel:07554007700">📞 Call</a><a class="card-btn map-btn" href="https://maps.google.com/?q=Gupta+Auto+Electric+TT+Nagar+Bhopal">📍 Map</a></div>
+        <div class="card"><b>Tyre Plaza</b> ⭐ 4.4<br>📍 Hoshangabad Road<br>🕒 9:00 AM - 8:00 PM<br><span class="tag">MRF</span><span class="tag">Ceat</span><span class="tag">Apollo</span><br><a class="card-btn" href="tel:07554007800">📞 Call</a><a class="card-btn map-btn" href="https://maps.google.com/?q=Tyre+Plaza+Hoshangabad+Road+Bhopal">📍 Map</a></div>
+        <div class="card"><b>Lubricant World</b> ⭐ 4.1<br>📍 New Market, Bhopal<br>🕒 10:00 AM - 7:30 PM<br><span class="tag">Castrol</span><span class="tag">Mobil</span><span class="tag">Shell</span><br><a class="card-btn" href="tel:07554007900">📞 Call</a><a class="card-btn map-btn" href="https://maps.google.com/?q=Lubricant+World+New+Market+Bhopal">📍 Map</a></div>
       `;
     }
 
     function showAutomobile() {
       document.getElementById('list').innerHTML = `
-        <div class="card">
-          <b>Maruti Suzuki Arena</b> ⭐ 4.5<br>
-          📍 Hoshangabad Road, Near RRL, Bhopal<br>
-          🕒 9:30 AM - 7:30 PM<br>
-          <span class="tag">New Car</span><span class="tag">Service</span><span class="tag">Test Drive</span><br>
-          <a class="card-btn" href="tel:07554011223">📞 Call</a>
-          <a class="card-btn map-btn" href="https://maps.google.com/?q=Maruti+Suzuki+Hoshangabad+Road+Bhopal">📍 Map</a>
-        </div>
-        <div class="card">
-          <b>Hero MotoCorp</b> ⭐ 4.3<br>
-          📍 Hamidia Road, Bhopal<br>
-          🕒 9:30 AM - 7:00 PM<br>
-          <span class="tag">Two Wheeler</span><span class="tag">Service</span><span class="tag">Spare Parts</span><br>
-          <a class="card-btn" href="tel:07554033445">📞 Call</a>
-          <a class="card-btn map-btn" href="https://maps.google.com/?q=Hero+Motocorp+Hamidia+Road+Bhopal">📍 Map</a>
-        </div>
+        <div class="card"><b>Maruti Suzuki Arena</b> ⭐ 4.5<br>📍 Hoshangabad Road, Near RRL<br>🕒 9:30 AM - 7:30 PM<br><span class="tag">New Car</span><span class="tag">Service</span><span class="tag">Test Drive</span><br><a class="card-btn" href="tel:07554011223">📞 Call</a><a class="card-btn map-btn" href="https://maps.google.com/?q=Maruti+Suzuki+Hoshangabad+Road+Bhopal">📍 Map</a></div>
+        <div class="card"><b>Hero MotoCorp</b> ⭐ 4.3<br>📍 Hamidia Road, Bhopal<br>🕒 9:30 AM - 7:00 PM<br><span class="tag">Two Wheeler</span><span class="tag">Service</span><span class="tag">Spare Parts</span><br><a class="card-btn" href="tel:07554033445">📞 Call</a><a class="card-btn map-btn" href="https://maps.google.com/?q=Hero+Motocorp+Hamidia+Road+Bhopal">📍 Map</a></div>
+        <div class="card"><b>Hyundai Showroom</b> ⭐ 4.4<br>📍 MP Nagar Zone-1<br>🕒 9:30 AM - 7:30 PM<br><span class="tag">Creta</span><span class="tag">i20</span><span class="tag">Venue</span><br><a class="card-btn" href="tel:07554008100">📞 Call</a><a class="card-btn map-btn" href="https://maps.google.com/?q=Hyundai+MP+Nagar+Bhopal">📍 Map</a></div>
+        <div class="card"><b>Tata Motors</b> ⭐ 4.3<br>📍 Ayodhya Bypass<br>🕒 9:30 AM - 7:00 PM<br><span class="tag">Nexon</span><span class="tag">Harrier</span><span class="tag">Commercial</span><br><a class="card-btn" href="tel:07554008200">📞 Call</a><a class="card-btn map-btn" href="https://maps.google.com/?q=Tata+Motors+Ayodhya+Bypass+Bhopal">📍 Map</a></div>
+        <div class="card"><b>Honda Cars</b> ⭐ 4.5<br>📍 Hoshangabad Road<br>🕒 9:30 AM - 7:30 PM<br><span class="tag">City</span><span class="tag">Amaze</span><span class="tag">Service</span><br><a class="card-btn" href="tel:07554008300">📞 Call</a><a class="card-btn map-btn" href="https://maps.google.com/?q=Honda+Cars+Hoshangabad+Road+Bhopal">📍 Map</a></div>
+        <div class="card"><b>Mahindra Showroom</b> ⭐ 4.2<br>📍 Kolar Road, Bhopal<br>🕒 9:30 AM - 7:00 PM<br><span class="tag">Thar</span><span class="tag">Scorpio</span><span class="tag">XUV</span><br><a class="card-btn" href="tel:07554008400">📞 Call</a><a class="card-btn map-btn" href="https://maps.google.com/?q=Mahindra+Kolar+Road+Bhopal">📍 Map</a></div>
+        <div class="card"><b>Royal Enfield</b> ⭐ 4.6<br>📍 New Market, Bhopal<br>🕒 10:00 AM - 7:00 PM<br><span class="tag">Bullet</span><span class="tag">Classic</span><span class="tag">Himalayan</span><br><a class="card-btn" href="tel:07554008500">📞 Call</a><a class="card-btn map-btn" href="https://maps.google.com/?q=Royal+Enfield+New+Market+Bhopal">📍 Map</a></div>
+        <div class="card"><b>Bajaj Auto</b> ⭐ 4.3<br>📍 MP Nagar, Bhopal<br>🕒 9:30 AM - 7:00 PM<br><span class="tag">Pulsar</span><span class="tag">Chetak</span><span class="tag">Service</span><br><a class="card-btn" href="tel:07554008600">📞 Call</a><a class="card-btn map-btn" href="https://maps.google.com/?q=Bajaj+Auto+MP+Nagar+Bhopal">📍 Map</a></div>
+        <div class="card"><b>TVS Motors</b> ⭐ 4.2<br>📍 TT Nagar, Bhopal<br>🕒 9:30 AM - 7:00 PM<br><span class="tag">Apache</span><span class="tag">Jupiter</span><span class="tag">iQube</span><br><a class="card-btn" href="tel:07554008700">📞 Call</a><a class="card-btn map-btn" href="https://maps.google.com/?q=TVS+Motors+TT+Nagar+Bhopal">📍 Map</a></div>
+        <div class="card"><b>Kia Motors</b> ⭐ 4.5<br>📍 DB City Mall Road<br>🕒 9:30 AM - 7:30 PM<br><span class="tag">Seltos</span><span class="tag">Sonet</span><span class="tag">Premium</span><br><a class="card-btn" href="tel:07554008800">📞 Call</a><a class="card-btn map-btn" href="https://maps.google.com/?q=Kia+Motors+DB+City+Mall+Road+Bhopal">📍 Map</a></div>
       `;
     }
 
     function showServices() {
       document.getElementById('list').innerHTML = `
-        <div class="card">
-          <b>Sharma AC Repair</b> ⭐ 4.4<br>
-          📍 Kolar Road, Bhopal<br>
-          🕒 8:00 AM - 9:00 PM<br>
-          <span class="tag">AC</span><span class="tag">Fridge</span><span class="tag">Home Visit</span><br>
-          <a class="card-btn" href="tel:9876543210">📞 Call</a>
-          <a class="card-btn map-btn" href="https://maps.google.com/?q=Kolar+Road+Bhopal">📍 Map</a>
-        </div>
+        <div class="card"><b>Sharma AC Repair</b> ⭐ 4.4<br>📍 Kolar Road, Bhopal<br>🕒 8:00 AM - 9:00 PM<br><span class="tag">AC</span><span class="tag">Fridge</span><span class="tag">Home Visit</span><br><a class="card-btn" href="tel:9876543210">📞 Call</a><a class="card-btn map-btn" href="https://maps.google.com/?q=Kolar+Road+Bhopal">📍 Map</a></div>
+        <div class="card"><b>Verma Electrician</b> ⭐ 4.5<br>📍 Arera Colony<br>🕒 24 Hours<br><span class="tag">Wiring</span><span class="tag">Fan</span><span class="tag">Emergency</span><br><a class="card-btn" href="tel:9876500001">📞 Call</a><a class="card-btn map-btn" href="https://maps.google.com/?q=Arera+Colony+Bhopal">📍 Map</a></div>
+        <div class="card"><b>Yadav Plumber</b> ⭐ 4.3<br>📍 MP Nagar Zone-1<br>🕒 7:00 AM - 9:00 PM<br><span class="tag">Leakage</span><span class="tag">Tap</span><span class="tag">Motor</span><br><a class="card-btn" href="tel:9876500002">📞 Call</a><a class="card-btn map-btn" href="https://maps.google.com/?q=MP+Nagar+Zone+1+Bhopal">📍 Map</a></div>
+        <div class="card"><b>Raju Carpenter</b> ⭐ 4.2<br>📍 Hamidia Road<br>🕒 9:00 AM - 8:00 PM<br><span class="tag">Furniture</span><span class="tag">Modular</span><span class="tag">Repair</span><br><a class="card-btn" href="tel:9876500003">📞 Call</a><a class="card-btn map-btn" href="https://maps.google.com/?q=Hamidia+Road+Bhopal">📍 Map</a></div>
+        <div class="card"><b>Deepak Painter</b> ⭐ 4.4<br>📍 10 No. Market<br>🕒 8:00 AM - 6:00 PM<br><span class="tag">Wall Paint</span><span class="tag">Texture</span><span class="tag">Waterproof</span><br><a class="card-btn" href="tel:9876500004">📞 Call</a><a class="card-btn map-btn" href="https://maps.google.com/?q=10+No+Market+Bhopal">📍 Map</a></div>
+        <div class="card"><b>Computer Wale Bhaiya</b> ⭐ 4.6<br>📍 New Market, Bhopal<br>🕒 10:00 AM - 8:00 PM<br><span class="tag">Laptop</span><span class="tag">PC Repair</span><span class="tag">Data Recovery</span><br><a class="card-btn" href="tel:9876500005">📞 Call</a><a class="card-btn map-btn" href="https://maps.google.com/?q=New+Market+Bhopal">📍 Map</a></div>
+        <div class="card"><b>RO Service Center</b> ⭐ 4.3<br>📍 Kolar Road<br>🕒 9:00 AM - 8:00 PM<br><span class="tag">RO</span><span class="tag">Water Purifier</span><span class="tag">AMC</span><br><a class="card-btn" href="tel:9876500006">📞 Call</a><a class="card-btn map-btn" href="https://maps.google.com/?q=Kolar+Road+Bhopal">📍 Map</a></div>
+        <div class="card"><b>Mobile Doctor</b> ⭐ 4.5<br>📍 MP Nagar, Bhopal<br>🕒 10:00 AM - 9:00 PM<br><span class="tag">Screen</span><span class="tag">Battery</span><span class="tag">All Brand</span><br><a class="card-btn" href="tel:9876500007">📞 Call</a><a class="card-btn map-btn" href="https://maps.google.com/?q=MP+Nagar+Bhopal">📍 Map</a></div>
+        <div class="card"><b>Home Cleaning Pro</b> ⭐ 4.2<br>📍 Arera Colony<br>🕒 8:00 AM - 6:00 PM<br><span class="tag">Sofa</span><span class="tag">Carpet</span><span class="tag">Full Home</span><br><a class="card-btn" href="tel:9876500008">📞 Call</a><a class="card-btn map-btn" href="https://maps.google.com/?q=Arera+Colony+Bhopal">📍 Map</a></div>
+        <div class="card"><b>Pest Control Bhopal</b> ⭐ 4.4<br>📍 Hoshangabad Road<br>🕒 9:00 AM - 7:00 PM<br><span class="tag">Cockroach</span><span class="tag">Termite</span><span class="tag">Safe</span><br><a class="card-btn" href="tel:9876500009">📞 Call</a><a class="card-btn map-btn" href="https://maps.google.com/?q=Hoshangabad+Road+Bhopal">📍 Map</a></div>
       `;
     }
 
     function showFood() {
       document.getElementById('list').innerHTML = `
-        <div class="card">
-          <b>Manohar Dairy</b> ⭐ 4.8<br>
-          📍 Hamidia Road, Old City, Bhopal<br>
-          🕒 6:00 AM - 10:00 PM<br>
-          <span class="tag">Poha</span><span class="tag">Jalebi</span><span class="tag">Sweets</span><span class="tag">Famous</span><br>
-          <a class="card-btn" href="tel:07552500001">📞 Call</a>
-          <a class="card-btn map-btn" href="https://maps.google.com/?q=Manohar+Dairy+Hamidia+Road+Bhopal">📍 Map</a>
-        </div>
-        <div class="card">
-          <b>Sharma & Vishnu</b> ⭐ 4.6<br>
-          📍 MP Nagar Zone-1, Bhopal<br>
-          🕒 7:00 AM - 9:00 PM<br>
-          <span class="tag">Poha</span><span class="tag">Samosa</span><span class="tag">Kachori</span><br>
-          <a class="card-btn" href="tel:07552500003">📞 Call</a>
-          <a class="card-btn map-btn" href="https://maps.google.com/?q=Sharma+Vishnu+MP+Nagar+Bhopal">📍 Map</a>
-        </div>
+        <div class="card"><b>Manohar Dairy</b> ⭐ 4.8<br>📍 Hamidia Road, Old City<br>🕒 6:00 AM - 10:00 PM<br><span class="tag">Poha</span><span class="tag">Jalebi</span><span class="tag">Sweets</span><span class="tag">Famous</span><br><a class="card-btn" href="tel:07552500001">📞 Call</a><a class="card-btn map-btn" href="https://maps.google.com/?q=Manohar+Dairy+Hamidia+Road+Bhopal">📍 Map</a></div>
+        <div class="card"><b>Sharma & Vishnu</b> ⭐ 4.6<br>📍 MP Nagar Zone-1<br>🕒 7:00 AM - 9:00 PM<br><span class="tag">Poha</span><span class="tag">Samosa</span><span class="tag">Kachori</span><br><a class="card-btn" href="tel:07552500003">📞 Call</a><a class="card-btn map-btn" href="https://maps.google.com/?q=Sharma+Vishnu+MP+Nagar+Bhopal">📍 Map</a></div>
+        <div class="card"><b>Chatori Gali</b> ⭐ 4.5<br>📍 10 No. Market<br>🕒 5:00 PM - 11:00 PM<br><span class="tag">Chaat</span><span class="tag">Pani Puri</span><span class="tag">Street Food</span><br><a class="card-btn" href="tel:07552500010">📞 Call</a><a class="card-btn map-btn" href="https://maps.google.com/?q=Chatori+Gali+10+No+Market+Bhopal">📍 Map</a></div>
+        <div class="card"><b>Raju Tea Stall</b> ⭐ 4.7<br>📍 New Market, TT Nagar<br>🕒 6:00 AM - 10:00 PM<br><span class="tag">Chai</span><span class="tag">Bun Maska</span><span class="tag">Famous</span><br><a class="card-btn" href="tel:07552500011">📞 Call</a><a class="card-btn map-btn" href="https://maps.google.com/?q=Raju+Tea+Stall+New+Market+Bhopal">📍 Map</a></div>
+        <div class="card"><b>Anand Namkeen</b> ⭐ 4.4<br>📍 Chowk Bazaar<br>🕒 9:00 AM - 9:00 PM<br><span class="tag">Namkeen</span><span class="tag">Samosa</span><span class="tag">Kachori</span><br><a class="card-btn" href="tel:07552500012">📞 Call</a><a class="card-btn map-btn" href="https://maps.google.com/?q=Anand+Namkeen+Chowk+Bhopal">📍 Map</a></div>
+        <div class="card"><b>Swagat Sweets</b> ⭐ 4.3<br>📍 MP Nagar Zone-2<br>🕒 8:00 AM - 10:00 PM<br><span class="tag">Rasmalai</span><span class="tag">Gulab Jamun</span><span class="tag">Barfi</span><br><a class="card-btn" href="tel:07552500013">📞 Call</a><a class="card-btn map-btn" href="https://maps.google.com/?q=Swagat+Sweets+MP+Nagar+Bhopal">📍 Map</a></div>
+        <div class="card"><b>Jhilmil Chaat</b> ⭐ 4.5<br>📍 Hamidia Road<br>🕒 4:00 PM - 10:00 PM<br><span class="tag">Aloo Tikki</span><span class="tag">Dahi Puri</span><span class="tag">Bhel</span><br><a class="card-btn" href="tel:07552500014">📞 Call</a><a class="card-btn map-btn" href="https://maps.google.com/?q=Jhilmil+Chaat+Hamidia+Road+Bhopal">📍 Map</a></div>
+        <div class="card"><b>Poha Corner</b> ⭐ 4.6<br>📍 Kolar Road<br>🕒 6:30 AM - 11:00 AM<br><span class="tag">Indori Poha</span><span class="tag">Jalebi</span><span class="tag">Morning</span><br><a class="card-btn" href="tel:07552500015">📞 Call</a><a class="card-btn map-btn" href="https://maps.google.com/?q=Poha+Corner+Kolar+Road+Bhopal">📍 Map</a></div>
+        <div class="card"><b>Sagar Ratna</b> ⭐ 4.4<br>📍 DB City Mall<br>🕒 9:00 AM - 11:00 PM<br><span class="tag">South Indian</span><span class="tag">Dosa</span><span class="tag">Idli</span><br><a class="card-btn" href="tel:07552500016">📞 Call</a><a class="card-btn map-btn" href="https://maps.google.com/?q=Sagar+Ratna+DB+Mall+Bhopal">📍 Map</a></div>
+        <div class="card"><b>Bapu Ki Pav Bhaji</b> ⭐ 4.5<br>📍 10 No. Market<br>🕒 5:00 PM - 11:00 PM<br><span class="tag">Pav Bhaji</span><span class="tag">Tawa Pulao</span><span class="tag">Butter</span><br><a class="card-btn" href="tel:07552500017">📞 Call</a><a class="card-btn map-btn" href="https://maps.google.com/?q=Bapu+Ki+Pav+Bhaji+10+No+Market+Bhopal">📍 Map</a></div>
       `;
     }
 
     function showRestaurant() {
       document.getElementById('list').innerHTML = `
-        <div class="card">
-          <b>Indian Coffee House</b> ⭐ 4.5<br>
-          📍 New Market, Near Rang Mahal, Bhopal<br>
-          🕒 9:00 AM - 10:00 PM<br>
-          <span class="tag">South Indian</span><span class="tag">Coffee</span><span class="tag">Dosa</span><span class="tag">Vintage</span><br>
-          <a class="card-btn" href="tel:07552500002">📞 Call</a>
-          <a class="card-btn map-btn" href="https://maps.google.com/?q=Indian+Coffee+House+New+Market+Bhopal">📍 Map</a>
-        </div>
-        <div class="card">
-          <b>Sagar Gaire Fast Food</b> ⭐ 4.2<br>
-          📍 10 No. Market, Arera Colony, Bhopal<br>
-          🕒 11:00 AM - 11:00 PM<br>
-          <span class="tag">Chinese</span><span class="tag">Indian</span><span class="tag">Tandoor</span><br>
-          <a class="card-btn" href="tel:07552500004">📞 Call</a>
-          <a class="card-btn map-btn" href="https://maps.google.com/?q=Sagar+Gaire+10+No+Market+Bhopal">📍 Map</a>
-        </div>
-        <div class="card">
-          <b>Bapu Ki Kutia</b> ⭐ 4.4<br>
-          📍 MP Nagar Zone-1, Bhopal<br>
-          🕒 11:00 AM - 11:00 PM<br>
-          <span class="tag">Veg Thali</span><span class="tag">Punjabi</span><span class="tag">Family</span><br>
-          <a class="card-btn" href="tel:07552500005">📞 Call</a>
-          <a class="card-btn map-btn" href="https://maps.google.com/?q=Bapu+Ki+Kutia+MP+Nagar+Bhopal">📍 Map</a>
-        </div>
-        <div class="card">
-          <b>Zaika Restaurant</b> ⭐ 4.3<br>
-          📍 Hamidia Road, Bhopal<br>
-          🕒 12:00 PM - 12:00 AM<br>
-          <span class="tag">Mughlai</span><span class="tag">Biryani</span><span class="tag">Non-Veg</span><br>
-          <a class="card-btn" href="tel:07552500006">📞 Call</a>
-          <a class="card-btn map-btn" href="https://maps.google.com/?q=Zaika+Restaurant+Hamidia+Road+Bhopal">📍 Map</a>
-        </div>
+        <div class="card"><b>Indian Coffee House</b> ⭐ 4.5<br>📍 New Market, Near Rang Mahal<br>🕒 9:00 AM - 10:00 PM<br><span class="tag">South Indian</span><span class="tag">Coffee</span><span class="tag">Dosa</span><span class="tag">Vintage</span><br><a class="card-btn" href="tel:07552500002">📞 Call</a><a class="card-btn map-btn" href="https://maps.google.com/?q=Indian+Coffee+House+New+Market+Bhopal">📍 Map</a></div>
+        <div class="card"><b>Sagar Gaire Fast Food</b> ⭐ 4.2<br>📍 10 No. Market, Arera Colony<br>🕒 11:00 AM - 11:00 PM<br><span class="tag">Chinese</span><span class="tag">Indian</span><span class="tag">Tandoor</span><br><a class="card-btn" href="tel:07552500004">📞 Call</a><a class="card-btn map-btn" href="https://maps.google.com/?q=Sagar+Gaire+10+No+Market+Bhopal">📍 Map</a></div>
+        <div class="card"><b>Bapu Ki Kutia</b> ⭐ 4.4<br>📍 MP Nagar Zone-1<br>🕒 11:00 AM - 11:00 PM<br><span class="tag">Veg Thali</span><span class="tag">Punjabi</span><span class="tag">Family</span><br><a class="card-btn" href="tel:07552500005">📞 Call</a><a class="card-btn map-btn" href="https://maps.google.com/?q=Bapu+Ki+Kutia+MP+Nagar+Bhopal">📍 Map</a></div>
+        <div class="card"><b>Zaika Restaurant</b> ⭐ 4.3<br>📍 Hamidia Road, Bhopal<br>🕒 12:00 PM - 12:00 AM<br><span class="tag">Mughlai</span><span class="tag">Biryani</span><span class="tag">Non-Veg</span><br><a class="card-btn" href="tel:07552500006">📞 Call</a><a class="card-btn map-btn" href="https://maps.google.com/?q=Zaika+Restaurant+Hamidia+Road+Bhopal">📍 Map</a></div>
+        <div class="card"><b>Barbeque Nation</b> ⭐ 4.6<br>📍 DB City Mall<br>🕒 12:00 PM - 11:00 PM<br><span class="tag">Buffet</span><span class="tag">Grill</span><span class="tag">Live Counter</span><br><a class="card-btn" href="tel:07552500020">📞 Call</a><a class="card-btn map-btn" href="https://maps.google.com/?q=Barbeque+Nation+DB+Mall+Bhopal">📍 Map</a></div>
+        <div class="card"><b>Pind Balluchi</b> ⭐ 4.4<br>📍 Ashima Mall<br>🕒 11:00 AM - 11:00 PM<br><span class="tag">Punjabi</span><span class="tag">Dhaba Style</span><span class="tag">Lassi</span><br><a class="card-btn" href="tel:07552500021">📞 Call</a><a class="card-btn map-btn" href="https://maps.google.com/?q=Pind+Balluchi+Ashima+Mall+Bhopal">📍 Map</a></div>
+        <div class="card"><b>Mainland China</b> ⭐ 4.5<br>📍 DB City Mall<br>🕒 12:00 PM - 11:00 PM<br><span class="tag">Chinese</span><span class="tag">Fine Dine</span><span class="tag">Dimsum</span><br><a class="card-btn" href="tel:07552500022">📞 Call</a><a class="card-btn map-btn" href="https://maps.google.com/?q=Mainland+China+DB+Mall+Bhopal">📍 Map</a></div>
+        <div class="card"><b>Haldiram's</b> ⭐ 4.3<br>📍 MP Nagar Zone-2<br>🕒 9:00 AM - 11:00 PM<br><span class="tag">North Indian</span><span class="tag">Chaat</span><span class="tag">Sweets</span><br><a class="card-btn" href="tel:07552500023">📞 Call</a><a class="card-btn map-btn" href="https://maps.google.com/?q=Haldirams+MP+Nagar+Bhopal">📍 Map</a></div>
+        <div class="card"><b>Absolute Barbecues</b> ⭐ 4.5<br>📍 Arera Colony<br>🕒 12:00 PM - 11:00 PM<br><span class="tag">BBQ</span><span class="tag">Unlimited</span><span class="tag">Buffet</span><br><a class="card-btn" href="tel:07552500024">📞 Call</a><a class="card-btn map-btn" href="https://maps.google.com/?q=Absolute+Barbecues+Arera+Colony+Bhopal">📍 Map</a></div>
+        <div class="card"><b>Wind & Waves</b> ⭐ 4.4<br>📍 Boat Club, Upper Lake<br>🕒 11:00 AM - 10:30 PM<br><span class="tag">Lake View</span><span class="tag">Multi Cuisine</span><span class="tag">Romantic</span><br><a class="card-btn" href="tel:07552500025">📞 Call</a><a class="card-btn map-btn" href="https://maps.google.com/?q=Wind+Waves+Boat+Club+Bhopal">📍 Map</a></div>
       `;
     }
 
     function showElectronics() {
       document.getElementById('list').innerHTML = `
-        <div class="card">
-          <b>Reliance Digital</b> ⭐ 4.4<br>
-          📍 DB City Mall, Arera Hills, Bhopal<br>
-          🕒 10:00 AM - 10:00 PM<br>
-          <span class="tag">Mobile</span><span class="tag">Laptop</span><span class="tag">TV</span><span class="tag">EMI</span><br>
-          <a class="card-btn" href="tel:07554005678">📞 Call</a>
-          <a class="card-btn map-btn" href="https://maps.google.com/?q=Reliance+Digital+DB+Mall+Bhopal">📍 Map</a>
-        </div>
-        <div class="card">
-          <b>Croma</b> ⭐ 4.3<br>
-          📍 Ashima Mall, Hoshangabad Road, Bhopal<br>
-          🕒 10:00 AM - 9:30 PM<br>
-          <span class="tag">Gadgets</span><span class="tag">Home Appliance</span><span class="tag">AC</span><span class="tag">Warranty</span><br>
-          <a class="card-btn" href="tel:07554009012">📞 Call</a>
-          <a class="card-btn map-btn" href="https://maps.google.com/?q=Croma+Ashima+Mall+Bhopal">📍 Map</a>
-        </div>
-        <div class="card">
-          <b>Vijay Sales</b> ⭐ 4.2<br>
-          📍 MP Nagar Zone-1, Bhopal<br>
-          🕒 10:30 AM - 9:00 PM<br>
-          <span class="tag">Electronics</span><span class="tag">Kitchen</span><span class="tag">Exchange</span><br>
-          <a class="card-btn" href="tel:07554003412">📞 Call</a>
-          <a class="card-btn map-btn" href="https://maps.google.com/?q=Vijay+Sales+MP+Nagar+Bhopal">📍 Map</a>
-        </div>
+        <div class="card"><b>Reliance Digital</b> ⭐ 4.4<br>📍 DB City Mall, Arera Hills<br>🕒 10:00 AM - 10:00 PM<br><span class="tag">Mobile</span><span class="tag">Laptop</span><span class="tag">TV</span><span class="tag">EMI</span><br><a class="card-btn" href="tel:07554090909">📞 Call</a><a class="card-btn map-btn" href="https://maps.google.com/?q=Reliance+Digital+DB+Mall+Bhopal">📍 Map</a></div>
+        <div class="card"><b>Croma Electronics</b> ⭐ 4.3<br>📍 Ashima Mall, Hoshangabad Road<br>🕒 10:00 AM - 10:00 PM<br><span class="tag">AC</span><span class="tag">Fridge</span><span class="tag">Gadgets</span><br><a class="card-btn" href="tel:07554009100">📞 Call</a><a class="card-btn map-btn" href="https://maps.google.com/?q=Croma+Ashima+Mall+Bhopal">📍 Map</a></div>
+        <div class="card"><b>Vijay Sales</b> ⭐ 4.2<br>📍 MP Nagar Zone-1<br>🕒 10:00 AM - 9:30 PM<br><span class="tag">Home Appliance</span><span class="tag">Kitchen</span><span class="tag">Exchange</span><br><a class="card-btn" href="tel:07554009200">📞 Call</a><a class="card-btn map-btn" href="https://maps.google.com/?q=Vijay+Sales+MP+Nagar+Bhopal">📍 Map</a></div>
+        <div class="card"><b>Poorvika Mobiles</b> ⭐ 4.1<br>📍 New Market, Bhopal<br>🕒 10:00 AM - 9:00 PM<br><span class="tag">Smartphone</span><span class="tag">Accessories</span><span class="tag">Finance</span><br><a class="card-btn" href="tel:07554009300">📞 Call</a><a class="card-btn map-btn" href="https://maps.google.com/?q=Poorvika+New+Market+Bhopal">📍 Map</a></div>
+        <div class="card"><b>Sangeetha Mobiles</b> ⭐ 4.0<br>📍 10 No. Market<br>🕒 10:00 AM - 9:00 PM<br><span class="tag">iPhone</span><span class="tag">Samsung</span><span class="tag">OnePlus</span><br><a class="card-btn" href="tel:07554009400">📞 Call</a><a class="card-btn map-btn" href="https://maps.google.com/?q=Sangeetha+10+No+Market+Bhopal">📍 Map</a></div>
+        <div class="card"><b>Lotus Electronics</b> ⭐ 4.3<br>📍 Hoshangabad Road<br>🕒 10:00 AM - 9:00 PM<br><span class="tag">TV</span><span class="tag">Soundbar</span><span class="tag">AC</span><br><a class="card-btn" href="tel:07554009500">📞 Call</a><a class="card-btn map-btn" href="https://maps.google.com/?q=Lotus+Electronics+Hoshangabad+Road+Bhopal">📍 Map</a></div>
+        <div class="
+                <div class="card"><b>Lotus Electronics</b> ⭐ 4.3<br>📍 Hoshangabad Road<br>🕒 10:00 AM - 9:00 PM<br><span class="tag">TV</span><span class="tag">Soundbar</span><span class="tag">AC</span><br><a class="card-btn" href="tel:07554009500">📞 Call</a><a class="card-btn map-btn" href="https://maps.google.com/?q=Lotus+Electronics+Hoshangabad+Road+Bhopal">📍 Map</a></div>
+        <div class="card"><b>Samsung Smart Plaza</b> ⭐ 4.5<br>📍 DB City Mall, Bhopal<br>🕒 10:00 AM - 10:00 PM<br><span class="tag">TV</span><span class="tag">Phone</span><span class="tag">Appliance</span><br><a class="card-btn" href="tel:07554009600">📞 Call</a><a class="card-btn map-btn" href="https://maps.google.com/?q=Samsung+Smart+Plaza+DB+Mall+Bhopal">📍 Map</a></div>
+        <div class="card"><b>LG Shoppe</b> ⭐ 4.4<br>📍 MP Nagar Zone-2<br>🕒 10:00 AM - 9:00 PM<br><span class="tag">OLED TV</span><span class="tag">Fridge</span><span class="tag">Washing Machine</span><br><a class="card-btn" href="tel:07554009700">📞 Call</a><a class="card-btn map-btn" href="https://maps.google.com/?q=LG+Shoppe+MP+Nagar+Bhopal">📍 Map</a></div>
+        <div class="card"><b>Sony Center</b> ⭐ 4.6<br>📍 Ashima Mall, Bhopal<br>🕒 10:00 AM - 9:30 PM<br><span class="tag">Bravia TV</span><span class="tag">PlayStation</span><span class="tag">Camera</span><br><a class="card-btn" href="tel:07554009800">📞 Call</a><a class="card-btn map-btn" href="https://maps.google.com/?q=Sony+Center+Ashima+Mall+Bhopal">📍 Map</a></div>
+        <div class="card"><b>Dell Exclusive Store</b> ⭐ 4.3<br>📍 New Market, Bhopal<br>🕒 10:30 AM - 8:30 PM<br><span class="tag">Laptop</span><span class="tag">Desktop</span><span class="tag">Monitor</span><br><a class="card-btn" href="tel:07554009900">📞 Call</a><a class="card-btn map-btn" href="https://maps.google.com/?q=Dell+Exclusive+Store+New+Market+Bhopal">📍 Map</a></div>
       `;
     }
   </script>
