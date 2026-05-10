@@ -54,6 +54,7 @@
     <button class="btn" onclick="showServices()">🔧 Services</button>
     <button class="btn" onclick="showFood()">🍕 Khana</button>
     <button class="btn" onclick="showRestaurant()">🍽️ Restaurant</button>
+    <button class="btn" onclick="showElectronics()">📱 Electronics</button>
   </div>
   
   <div id="list"></div>
@@ -286,6 +287,35 @@
           <span class="tag">Mughlai</span><span class="tag">Biryani</span><span class="tag">Non-Veg</span><br>
           <a class="card-btn" href="tel:07552500006">📞 Call</a>
           <a class="card-btn map-btn" href="https://maps.google.com/?q=Zaika+Restaurant+Hamidia+Road+Bhopal">📍 Map</a>
+        </div>
+      `;
+    }
+
+    function showElectronics() {
+      document.getElementById('list').innerHTML = `
+        <div class="card">
+          <b>Reliance Digital</b> ⭐ 4.4<br>
+          📍 DB City Mall, Arera Hills, Bhopal<br>
+          🕒 10:00 AM - 10:00 PM<br>
+          <span class="tag">Mobile</span><span class="tag">Laptop</span><span class="tag">TV</span><span class="tag">EMI</span><br>
+          <a class="card-btn" href="tel:07554005678">📞 Call</a>
+          <a class="card-btn map-btn" href="https://maps.google.com/?q=Reliance+Digital+DB+Mall+Bhopal">📍 Map</a>
+        </div>
+        <div class="card">
+          <b>Croma</b> ⭐ 4.3<br>
+          📍 Ashima Mall, Hoshangabad Road, Bhopal<br>
+          🕒 10:00 AM - 9:30 PM<br>
+          <span class="tag">Gadgets</span><span class="tag">Home Appliance</span><span class="tag">AC</span><span class="tag">Warranty</span><br>
+          <a class="card-btn" href="tel:07554009012">📞 Call</a>
+          <a class="card-btn map-btn" href="https://maps.google.com/?q=Croma+Ashima+Mall+Bhopal">📍 Map</a>
+        </div>
+        <div class="card">
+          <b>Vijay Sales</b> ⭐ 4.2<br>
+          📍 MP Nagar Zone-1, Bhopal<br>
+          🕒 10:30 AM - 9:00 PM<br>
+          <span class="tag">Electronics</span><span class="tag">Kitchen</span><span class="tag">Exchange</span><br>
+          <a class="card-btn" href="tel:07554003412">📞 Call</a>
+          <a class="card-btn map-btn" href="https://maps.google.com/?q=Vijay+Sales+MP+Nagar+Bhopal">📍 Map</a>
         </div>
       `;
     }
