@@ -6,20 +6,27 @@
   <title>Bhopal Business Info</title>
   <style>
     body { font-family: Arial; margin: 0; padding: 10px; background: #f0f8ff; }
-    h1 { text-align: center; color: #0066cc; }
+    h1 { text-align: center; color: #0066cc; margin: 10px 0; }
     .btn { 
       width: 100%; padding: 15px; margin: 8px 0; 
       background: #0066cc; color: white; border: none; 
       border-radius: 8px; font-size: 18px; font-weight: bold;
     }
     .card { 
-      background: white; padding: 15px; margin: 10px 0; 
-      border-radius: 8px; box-shadow: 0 2px 4px #ccc;
+      background: white; padding: 15px; margin: 12px 0; 
+      border-radius: 8px; box-shadow: 0 2px 6px #ccc;
+      line-height: 1.6;
     }
-    .card a { 
-      display: inline-block; margin-top: 8px; padding: 8px 15px; 
+    .card b { color: #0066cc; font-size: 18px; }
+    .card-btn { 
+      display: inline-block; margin: 8px 5px 0 0; padding: 8px 15px; 
       background: #28a745; color: white; text-decoration: none; 
-      border-radius: 5px;
+      border-radius: 5px; font-size: 14px;
+    }
+    .map-btn { background: #dc3545; }
+    .tag { 
+      display: inline-block; background: #e7f3ff; color: #0066cc; 
+      padding: 3px 8px; border-radius: 12px; font-size: 12px; margin: 3px 3px 0;
     }
   </style>
 </head>
@@ -44,22 +51,28 @@
     function showSupermarket() {
       document.getElementById('list').innerHTML = `
         <div class="card">
-          <b>D Mart</b><br>
-          Groceries, Home, Kitchen - Sab kuch<br>
-          MP Nagar Zone-1, Bhopal<br>
-          <a href="tel:07554061300">Call Karein</a>
+          <b>D Mart</b> ⭐ 4.4<br>
+          📍 MP Nagar Zone-1, Near Jyoti Cineplex, Bhopal<br>
+          🕒 7:30 AM - 10:30 PM<br>
+          <span class="tag">Groceries</span><span class="tag">Home</span><span class="tag">Kitchen</span><span class="tag">Parking</span><br>
+          <a class="card-btn" href="tel:07554061300">📞 Call</a>
+          <a class="card-btn map-btn" href="https://maps.google.com/?q=D+Mart+MP+Nagar+Bhopal">📍 Map</a>
         </div>
         <div class="card">
-          <b>Reliance Smart Bazaar</b><br>
-          Groceries, Fashion, Electronics<br>
-          DB Mall, Arera Hills, Bhopal<br>
-          <a href="tel:18008910001">Call Karein</a>
+          <b>Reliance Smart Bazaar</b> ⭐ 4.2<br>
+          📍 DB City Mall, Arera Hills, Bhopal<br>
+          🕒 8:00 AM - 10:00 PM<br>
+          <span class="tag">Groceries</span><span class="tag">Fashion</span><span class="tag">Electronics</span><span class="tag">AC</span><br>
+          <a class="card-btn" href="tel:18008910001">📞 Call</a>
+          <a class="card-btn map-btn" href="https://maps.google.com/?q=Reliance+Smart+DB+Mall+Bhopal">📍 Map</a>
         </div>
         <div class="card">
-          <b>Big Bazaar</b><br>
-          Hypermarket - Sab kuch ek jagah<br>
-          Ashima Mall, Hoshangabad Road<br>
-          <a href="tel:07556696000">Call Karein</a>
+          <b>Big Bazaar</b> ⭐ 4.0<br>
+          📍 Ashima Mall, Hoshangabad Road, Bhopal<br>
+          🕒 9:00 AM - 10:00 PM<br>
+          <span class="tag">Hypermarket</span><span class="tag">Food Court</span><span class="tag">Parking</span><br>
+          <a class="card-btn" href="tel:07556696000">📞 Call</a>
+          <a class="card-btn map-btn" href="https://maps.google.com/?q=Big+Bazaar+Ashima+Mall+Bhopal">📍 Map</a>
         </div>
       `;
     }
@@ -67,22 +80,28 @@
     function showCloth() {
       document.getElementById('list').innerHTML = `
         <div class="card">
-          <b>Raymond Showroom</b><br>
-          Company Outlet - Suit, Shirt, Fabric<br>
-          New Market, Bhopal<br>
-          <a href="tel:07554001234">Call Karein</a>
+          <b>Raymond Showroom</b> ⭐ 4.5<br>
+          📍 New Market, TT Nagar, Bhopal<br>
+          🕒 10:30 AM - 9:00 PM<br>
+          <span class="tag">Suiting</span><span class="tag">Shirting</span><span class="tag">Alteration</span><br>
+          <a class="card-btn" href="tel:07554001234">📞 Call</a>
+          <a class="card-btn map-btn" href="https://maps.google.com/?q=Raymond+New+Market+Bhopal">📍 Map</a>
         </div>
         <div class="card">
-          <b>Peter England</b><br>
-          Branded Shirts, Trousers, Blazers<br>
-          DB Mall, Bhopal<br>
-          <a href="tel:07554004567">Call Karein</a>
+          <b>Peter England</b> ⭐ 4.3<br>
+          📍 DB City Mall, Ground Floor, Bhopal<br>
+          🕒 10:00 AM - 10:00 PM<br>
+          <span class="tag">Formals</span><span class="tag">Casuals</span><span class="tag">AC</span><br>
+          <a class="card-btn" href="tel:07554004567">📞 Call</a>
+          <a class="card-btn map-btn" href="https://maps.google.com/?q=Peter+England+DB+Mall+Bhopal">📍 Map</a>
         </div>
         <div class="card">
-          <b>Fabindia</b><br>
-          Ethnic Wear, Kurta, Saree<br>
-          10 No. Market, Arera Colony<br>
-          <a href="tel:07554007890">Call Karein</a>
+          <b>Fabindia</b> ⭐ 4.6<br>
+          📍 10 No. Market, Arera Colony, Bhopal<br>
+          🕒 11:00 AM - 8:30 PM<br>
+          <span class="tag">Ethnic</span><span class="tag">Handloom</span><span class="tag">Organic</span><br>
+          <a class="card-btn" href="tel:07554007890">📞 Call</a>
+          <a class="card-btn map-btn" href="https://maps.google.com/?q=Fabindia+10+No+Market+Bhopal">📍 Map</a>
         </div>
       `;
     }
@@ -90,16 +109,20 @@
     function showJewellery() {
       document.getElementById('list').innerHTML = `
         <div class="card">
-          <b>Tanishq Jewellery</b><br>
-          Gold, Diamond, Silver<br>
-          DB Mall, Bhopal<br>
-          <a href="tel:07554002345">Call Karein</a>
+          <b>Tanishq Jewellery</b> ⭐ 4.7<br>
+          📍 DB City Mall, First Floor, Bhopal<br>
+          🕒 11:00 AM - 9:00 PM<br>
+          <span class="tag">Gold</span><span class="tag">Diamond</span><span class="tag">Hallmark</span><br>
+          <a class="card-btn" href="tel:07554002345">📞 Call</a>
+          <a class="card-btn map-btn" href="https://maps.google.com/?q=Tanishq+DB+Mall+Bhopal">📍 Map</a>
         </div>
         <div class="card">
-          <b>Kalyan Jewellers</b><br>
-          Bridal Jewellery, Gold Coins<br>
-          New Market, Bhopal<br>
-          <a href="tel:07554003456">Call Karein</a>
+          <b>Kalyan Jewellers</b> ⭐ 4.5<br>
+          📍 New Market, Near Rang Mahal, Bhopal<br>
+          🕒 10:30 AM - 8:30 PM<br>
+          <span class="tag">Bridal</span><span class="tag">Gold Coins</span><span class="tag">EMI</span><br>
+          <a class="card-btn" href="tel:07554003456">📞 Call</a>
+          <a class="card-btn map-btn" href="https://maps.google.com/?q=Kalyan+Jewellers+New+Market+Bhopal">📍 Map</a>
         </div>
       `;
     }
@@ -107,16 +130,20 @@
     function showShoes() {
       document.getElementById('list').innerHTML = `
         <div class="card">
-          <b>Bata Showroom</b><br>
-          Shoes, Sandals, School Shoes<br>
-          New Market, Bhopal<br>
-          <a href="tel:07554006789">Call Karein</a>
+          <b>Bata Showroom</b> ⭐ 4.2<br>
+          📍 New Market, Main Road, Bhopal<br>
+          🕒 10:00 AM - 9:00 PM<br>
+          <span class="tag">Formal</span><span class="tag">Casual</span><span class="tag">School Shoes</span><br>
+          <a class="card-btn" href="tel:07554006789">📞 Call</a>
+          <a class="card-btn map-btn" href="https://maps.google.com/?q=Bata+New+Market+Bhopal">📍 Map</a>
         </div>
         <div class="card">
-          <b>Red Chief</b><br>
-          Leather Shoes, Casual, Formal<br>
-          DB Mall, Bhopal<br>
-          <a href="tel:07554008901">Call Karein</a>
+          <b>Red Chief</b> ⭐ 4.4<br>
+          📍 DB City Mall, Bhopal<br>
+          🕒 10:00 AM - 10:00 PM<br>
+          <span class="tag">Leather</span><span class="tag">Rugged</span><span class="tag">AC</span><br>
+          <a class="card-btn" href="tel:07554008901">📞 Call</a>
+          <a class="card-btn map-btn" href="https://maps.google.com/?q=Red+Chief+DB+Mall+Bhopal">📍 Map</a>
         </div>
       `;
     }
@@ -124,16 +151,12 @@
     function showSports() {
       document.getElementById('list').innerHTML = `
         <div class="card">
-          <b>Decathlon Sports</b><br>
-          Cricket, Football, Gym Equipment<br>
-          Ashima Mall, Hoshangabad Road<br>
-          <a href="tel:07554010101">Call Karein</a>
-        </div>
-        <div class="card">
-          <b>Sports Station</b><br>
-          Bat, Ball, Shoes, Tracksuit<br>
-          MP Nagar Zone-2, Bhopal<br>
-          <a href="tel:07554020202">Call Karein</a>
+          <b>Decathlon Sports</b> ⭐ 4.6<br>
+          📍 Ashima Mall, Hoshangabad Road, Bhopal<br>
+          🕒 9:00 AM - 10:00 PM<br>
+          <span class="tag">Cricket</span><span class="tag">Football</span><span class="tag">Gym</span><span class="tag">Trial Zone</span><br>
+          <a class="card-btn" href="tel:07554010101">📞 Call</a>
+          <a class="card-btn map-btn" href="https://maps.google.com/?q=Decathlon+Ashima+Mall+Bhopal">📍 Map</a>
         </div>
       `;
     }
@@ -141,16 +164,12 @@
     function showMedical() {
       document.getElementById('list').innerHTML = `
         <div class="card">
-          <b>Apollo Pharmacy</b><br>
-          24x7 Medicine, Health Products<br>
-          MP Nagar, Bhopal<br>
-          <a href="tel:07554040404">Call Karein</a>
-        </div>
-        <div class="card">
-          <b>MedPlus</b><br>
-          All Medicine, Home Delivery<br>
-          Arera Colony, Bhopal<br>
-          <a href="tel:07554050505">Call Karein</a>
+          <b>Apollo Pharmacy</b> ⭐ 4.3<br>
+          📍 MP Nagar Zone-1, Bhopal<br>
+          🕒 24 Hours Open<br>
+          <span class="tag">24x7</span><span class="tag">Home Delivery</span><span class="tag">All Medicine</span><br>
+          <a class="card-btn" href="tel:07554040404">📞 Call</a>
+          <a class="card-btn map-btn" href="https://maps.google.com/?q=Apollo+Pharmacy+MP+Nagar+Bhopal">📍 Map</a>
         </div>
       `;
     }
@@ -158,16 +177,12 @@
     function showAutoParts() {
       document.getElementById('list').innerHTML = `
         <div class="card">
-          <b>Bhopal Auto Parts</b><br>
-          Car Spare Parts, Engine Oil<br>
-          Hamidia Road, Bhopal<br>
-          <a href="tel:07554070707">Call Karein</a>
-        </div>
-        <div class="card">
-          <b>New Bharat Motors</b><br>
-          Bike Parts, Tyre, Battery<br>
-          Bairagarh, Bhopal<br>
-          <a href="tel:07554080808">Call Karein</a>
+          <b>Bhopal Auto Parts</b> ⭐ 4.1<br>
+          📍 Hamidia Road, Old City, Bhopal<br>
+          🕒 9:00 AM - 8:00 PM<br>
+          <span class="tag">Car Parts</span><span class="tag">Engine Oil</span><span class="tag">Wholesale</span><br>
+          <a class="card-btn" href="tel:07554070707">📞 Call</a>
+          <a class="card-btn map-btn" href="https://maps.google.com/?q=Hamidia+Road+Auto+Parts+Bhopal">📍 Map</a>
         </div>
       `;
     }
@@ -175,22 +190,20 @@
     function showAutomobile() {
       document.getElementById('list').innerHTML = `
         <div class="card">
-          <b>Maruti Suzuki Arena</b><br>
-          Car Showroom - Swift, Baleno, Brezza<br>
-          Hoshangabad Road, Bhopal<br>
-          <a href="tel:07554011223">Call Karein</a>
+          <b>Maruti Suzuki Arena</b> ⭐ 4.5<br>
+          📍 Hoshangabad Road, Near RRL, Bhopal<br>
+          🕒 9:30 AM - 7:30 PM<br>
+          <span class="tag">New Car</span><span class="tag">Service</span><span class="tag">Test Drive</span><br>
+          <a class="card-btn" href="tel:07554011223">📞 Call</a>
+          <a class="card-btn map-btn" href="https://maps.google.com/?q=Maruti+Suzuki+Hoshangabad+Road+Bhopal">📍 Map</a>
         </div>
         <div class="card">
-          <b>Hyundai Showroom</b><br>
-          Car Showroom - i20, Creta, Venue<br>
-          MP Nagar, Bhopal<br>
-          <a href="tel:07554022334">Call Karein</a>
-        </div>
-        <div class="card">
-          <b>Hero MotoCorp</b><br>
-          Two Wheeler - Splendor, Xtreme<br>
-          Hamidia Road, Bhopal<br>
-          <a href="tel:07554033445">Call Karein</a>
+          <b>Hero MotoCorp</b> ⭐ 4.3<br>
+          📍 Hamidia Road, Bhopal<br>
+          🕒 9:30 AM - 7:00 PM<br>
+          <span class="tag">Two Wheeler</span><span class="tag">Service</span><span class="tag">Spare Parts</span><br>
+          <a class="card-btn" href="tel:07554033445">📞 Call</a>
+          <a class="card-btn map-btn" href="https://maps.google.com/?q=Hero+Motocorp+Hamidia+Road+Bhopal">📍 Map</a>
         </div>
       `;
     }
@@ -198,16 +211,12 @@
     function showServices() {
       document.getElementById('list').innerHTML = `
         <div class="card">
-          <b>Sharma AC Repair</b><br>
-          AC, Fridge, Washing Machine<br>
-          Kolar Road, Bhopal<br>
-          <a href="tel:9876543210">Call Karein</a>
-        </div>
-        <div class="card">
-          <b>City Cab Service</b><br>
-          24x7 Taxi, Airport Pickup<br>
-          Bhopal Station<br>
-          <a href="tel:9898989898">Call Karein</a>
+          <b>Sharma AC Repair</b> ⭐ 4.4<br>
+          📍 Kolar Road, Bhopal<br>
+          🕒 8:00 AM - 9:00 PM<br>
+          <span class="tag">AC</span><span class="tag">Fridge</span><span class="tag">Home Visit</span><br>
+          <a class="card-btn" href="tel:9876543210">📞 Call</a>
+          <a class="card-btn map-btn" href="https://maps.google.com/?q=Kolar+Road+Bhopal">📍 Map</a>
         </div>
       `;
     }
@@ -215,16 +224,20 @@
     function showFood() {
       document.getElementById('list').innerHTML = `
         <div class="card">
-          <b>Manohar Dairy</b><br>
-          Poha, Jalebi, Sweets<br>
-          Hamidia Road, Bhopal<br>
-          <a href="tel:07552500001">Call Karein</a>
+          <b>Manohar Dairy</b> ⭐ 4.8<br>
+          📍 Hamidia Road, Old City, Bhopal<br>
+          🕒 6:00 AM - 10:00 PM<br>
+          <span class="tag">Poha</span><span class="tag">Jalebi</span><span class="tag">Sweets</span><span class="tag">Famous</span><br>
+          <a class="card-btn" href="tel:07552500001">📞 Call</a>
+          <a class="card-btn map-btn" href="https://maps.google.com/?q=Manohar+Dairy+Hamidia+Road+Bhopal">📍 Map</a>
         </div>
         <div class="card">
-          <b>Sharma & Vishnu Fast Food</b><br>
-          Poha, Samosa, Kachori<br>
-          MP Nagar, Bhopal<br>
-          <a href="tel:07552500003">Call Karein</a>
+          <b>Sharma & Vishnu</b> ⭐ 4.6<br>
+          📍 MP Nagar Zone-1, Bhopal<br>
+          🕒 7:00 AM - 9:00 PM<br>
+          <span class="tag">Poha</span><span class="tag">Samosa</span><span class="tag">Kachori</span><br>
+          <a class="card-btn" href="tel:07552500003">📞 Call</a>
+          <a class="card-btn map-btn" href="https://maps.google.com/?q=Sharma+Vishnu+MP+Nagar+Bhopal">📍 Map</a>
         </div>
       `;
     }
@@ -232,28 +245,36 @@
     function showRestaurant() {
       document.getElementById('list').innerHTML = `
         <div class="card">
-          <b>Indian Coffee House</b><br>
-          South Indian, Coffee, Dosa<br>
-          New Market, Bhopal<br>
-          <a href="tel:07552500002">Call Karein</a>
+          <b>Indian Coffee House</b> ⭐ 4.5<br>
+          📍 New Market, Near Rang Mahal, Bhopal<br>
+          🕒 9:00 AM - 10:00 PM<br>
+          <span class="tag">South Indian</span><span class="tag">Coffee</span><span class="tag">Dosa</span><span class="tag">Vintage</span><br>
+          <a class="card-btn" href="tel:07552500002">📞 Call</a>
+          <a class="card-btn map-btn" href="https://maps.google.com/?q=Indian+Coffee+House+New+Market+Bhopal">📍 Map</a>
         </div>
         <div class="card">
-          <b>Sagar Gaire Fast Food</b><br>
-          Chinese, Indian, Tandoor<br>
-          10 No. Market, Bhopal<br>
-          <a href="tel:07552500004">Call Karein</a>
+          <b>Sagar Gaire Fast Food</b> ⭐ 4.2<br>
+          📍 10 No. Market, Arera Colony, Bhopal<br>
+          🕒 11:00 AM - 11:00 PM<br>
+          <span class="tag">Chinese</span><span class="tag">Indian</span><span class="tag">Tandoor</span><br>
+          <a class="card-btn" href="tel:07552500004">📞 Call</a>
+          <a class="card-btn map-btn" href="https://maps.google.com/?q=Sagar+Gaire+10+No+Market+Bhopal">📍 Map</a>
         </div>
         <div class="card">
-          <b>Bapu Ki Kutia</b><br>
-          Veg Thali, Punjabi Food<br>
-          MP Nagar Zone-1, Bhopal<br>
-          <a href="tel:07552500005">Call Karein</a>
+          <b>Bapu Ki Kutia</b> ⭐ 4.4<br>
+          📍 MP Nagar Zone-1, Bhopal<br>
+          🕒 11:00 AM - 11:00 PM<br>
+          <span class="tag">Veg Thali</span><span class="tag">Punjabi</span><span class="tag">Family</span><br>
+          <a class="card-btn" href="tel:07552500005">📞 Call</a>
+          <a class="card-btn map-btn" href="https://maps.google.com/?q=Bapu+Ki+Kutia+MP+Nagar+Bhopal">📍 Map</a>
         </div>
         <div class="card">
-          <b>Zaika Restaurant</b><br>
-          Mughlai, Biryani, Non-Veg<br>
-          Hamidia Road, Bhopal<br>
-          <a href="tel:07552500006">Call Karein</a>
+          <b>Zaika Restaurant</b> ⭐ 4.3<br>
+          📍 Hamidia Road, Bhopal<br>
+          🕒 12:00 PM - 12:00 AM<br>
+          <span class="tag">Mughlai</span><span class="tag">Biryani</span><span class="tag">Non-Veg</span><br>
+          <a class="card-btn" href="tel:07552500006">📞 Call</a>
+          <a class="card-btn map-btn" href="https://maps.google.com/?q=Zaika+Restaurant+Hamidia+Road+Bhopal">📍 Map</a>
         </div>
       `;
     }
