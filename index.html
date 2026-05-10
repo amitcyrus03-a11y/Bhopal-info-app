@@ -6,12 +6,21 @@
   <title>Bhopal Business Info</title>
   <style>
     body { font-family: Arial; margin: 0; padding: 10px; background: #f0f8ff; }
-    h1 { text-align: center; color: #0066cc; margin: 10px 0; }
-    .btn { 
-      width: 100%; padding: 15px; margin: 8px 0; 
-      background: #0066cc; color: white; border: none; 
-      border-radius: 8px; font-size: 18px; font-weight: bold;
+    h1 { text-align: center; color: #0066cc; margin: 10px 0 15px 0; }
+    
+    .btn-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 8px;
+      margin-bottom: 15px;
     }
+    
+    .btn { 
+      width: 100%; padding: 14px 5px; margin: 0; 
+      background: #0066cc; color: white; border: none; 
+      border-radius: 8px; font-size: 14px; font-weight: bold;
+    }
+    
     .card { 
       background: white; padding: 15px; margin: 12px 0; 
       border-radius: 8px; box-shadow: 0 2px 6px #ccc;
@@ -33,17 +42,19 @@
 <body>
   <h1>Bhopal Business Info</h1>
   
-  <button class="btn" onclick="showSupermarket()">🛒 Supermarket</button>
-  <button class="btn" onclick="showCloth()">👔 Cloth Store</button>
-  <button class="btn" onclick="showJewellery()">💍 Jewellery</button>
-  <button class="btn" onclick="showShoes()">👟 Shoes</button>
-  <button class="btn" onclick="showSports()">⚽ Sports</button>
-  <button class="btn" onclick="showMedical()">💊 Medical Store</button>
-  <button class="btn" onclick="showAutoParts()">🔩 Auto Parts</button>
-  <button class="btn" onclick="showAutomobile()">🚗 Automobile</button>
-  <button class="btn" onclick="showServices()">🔧 Services</button>
-  <button class="btn" onclick="showFood()">🍕 Khana / Food</button>
-  <button class="btn" onclick="showRestaurant()">🍽️ Restaurant</button>
+  <div class="btn-grid">
+    <button class="btn" onclick="showSupermarket()">🛒 Supermarket</button>
+    <button class="btn" onclick="showCloth()">👔 Cloth Store</button>
+    <button class="btn" onclick="showJewellery()">💍 Jewellery</button>
+    <button class="btn" onclick="showShoes()">👟 Shoes</button>
+    <button class="btn" onclick="showSports()">⚽ Sports</button>
+    <button class="btn" onclick="showMedical()">💊 Medical</button>
+    <button class="btn" onclick="showAutoParts()">🔩 Auto Parts</button>
+    <button class="btn" onclick="showAutomobile()">🚗 Automobile</button>
+    <button class="btn" onclick="showServices()">🔧 Services</button>
+    <button class="btn" onclick="showFood()">🍕 Khana</button>
+    <button class="btn" onclick="showRestaurant()">🍽️ Restaurant</button>
+  </div>
   
   <div id="list"></div>
 
