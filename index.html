@@ -72,7 +72,7 @@
           <button onclick="showATM()">ATM/Bank</button>
       <button onclick="showPolice()">Police Station</button>
       <button onclick="showMechanic()">Mechanic</button>
-      <button onclick="showKirana()">Kirana Store</button>
+    <button onclick="showSuperMarket()">Super Market</button>
       <button onclick="showBusStand()">Bus Stand</button>
   </div>
   
@@ -110,19 +110,38 @@
     }
 
     function showHospital() {
-      document.getElementById('list').innerHTML = `
-        <div class="card"><b>AIIMS Bhopal</b> ⭐ 4.6<br>📍 Saket Nagar<br>🕒 24 Hours<br><span class="tag">Govt</span><span class="tag">Emergency</span><br><a class="card-btn call-btn" href="tel:07552982400">📞 Call</a><a class="card-btn map-btn" href="https://maps.google.com/?q=AIIMS+Bhopal">📍 Map</a></div>
-        <div class="card"><b>Bansal Hospital</b> ⭐ 4.3<br>📍 Shahpura<br>🕒 24 Hours<br><span class="tag">Multi-Speciality</span><br><a class="card-btn call-btn" href="tel:07554082828">📞 Call</a><a class="card-btn map-btn" href="https://maps.google.com/?q=Bansal+Hospital+Bhopal">📍 Map</a></div>
-        <div class="card"><b>Narmada Hospital</b> ⭐ 4.2<br>📍 Arera Colony<br>🕒 24 Hours<br><span class="tag">Private</span><span class="tag">ICU</span><br><a class="card-btn call-btn" href="tel:07552570001">📞 Call</a><a class="card-btn map-btn" href="https://maps.google.com/?q=Narmada+Hospital+Bhopal">📍 Map</a></div>
-        <div class="card"><b>Hamidia Hospital</b> ⭐ 4.0<br>📍 Royal Market<br>🕒 24 Hours<br><span class="tag">Govt</span><span class="tag">Trauma</span><br><a class="card-btn call-btn" href="tel:07554052000">📞 Call</a><a class="card-btn map-btn" href="https://maps.google.com/?q=Hamidia+Hospital+Bhopal">📍 Map</a></div>
-        <div class="card"><b>Siddhanta Red Cross</b> ⭐ 4.1<br>📍 Link Road 1<br>🕒 24 Hours<br><span class="tag">Charitable</span><br><a class="card-btn call-btn" href="tel:07552550055">📞 Call</a><a class="card-btn map-btn" href="https://maps.google.com/?q=Siddhanta+Red+Cross+Bhopal">📍 Map</a></div>
-        <div class="card"><b>Chirayu Medical College</b> ⭐ 4.3<br>📍 Bairagarh<br>🕒 24 Hours<br><span class="tag">Medical College</span><br><a class="card-btn call-btn" href="tel:07554061100">📞 Call</a><a class="card-btn map-btn" href="https://maps.google.com/?q=Chirayu+Medical+College+Bhopal">📍 Map</a></div>
-        <div class="card"><b>Peoples Hospital</b> ⭐ 4.2<br>📍 Bhanpur<br>🕒 24 Hours<br><span class="tag">Multi-Speciality</span><br><a class="card-btn call-btn" href="tel:07554062200">📞 Call</a><a class="card-btn map-btn" href="https://maps.google.com/?q=Peoples+Hospital+Bhopal">📍 Map</a></div>
-        <div class="card"><b>J K Hospital</b> ⭐ 4.0<br>📍 Kolar Road<br>🕒 24 Hours<br><span class="tag">Private</span><br><a class="card-btn call-btn" href="tel:07554063300">📞 Call</a><a class="card-btn map-btn" href="https://maps.google.com/?q=JK+Hospital+Bhopal">📍 Map</a></div>
-        <div class="card"><b>Kasturba Hospital</b> ⭐ 3.9<br>📍 BHEL<br>🕒 24 Hours<br><span class="tag">Govt</span><span class="tag">BHEL</span><br><a class="card-btn call-btn" href="tel:07552500300">📞 Call</a><a class="card-btn map-btn" href="https://maps.google.com/?q=Kasturba+Hospital+Bhopal">📍 Map</a></div>
-        <div class="card"><b>Care Hospital</b> ⭐ 4.4<br>📍 Arera Hills<br>🕒 24 Hours<br><span class="tag">Cardiac</span><span class="tag">Private</span><br><a class="card-btn call-btn" href="tel:07554064400">📞 Call</a><a class="card-btn map-btn" href="https://maps.google.com/?q=Care+Hospital+Bhopal">📍 Map</a></div>
-      `;
-    }
+  document.getElementById('content').innerHTML = `
+    <div class="card">
+      <h3>Hamidia Hospital</h3>
+      <p>📍 Sultania Road, Royal Market</p>
+      <p>🏥 Govt Hospital | 🚑 Emergency 24x7</p>
+      <div class="btn-group">
+        <a href="tel:07554050450" class="card-btn call-btn">📞 Call</a>
+        <a href="https://maps.google.com/?q=Hamidia+Hospital+Bhopal" class="card-btn map-btn">🗺️ Map</a>
+      </div>
+    </div>
+
+    <div class="card">
+      <h3>JP Hospital - Jai Prakash</h3>
+      <p>📍 1250, Link Road No.2, Shivaji Nagar</p>
+      <p>🏥 District Hospital | 📞 0755-2556812</p>
+      <div class="btn-group">
+        <a href="tel:07552556812" class="card-btn call-btn">📞 Call</a>
+        <a href="https://maps.google.com/?q=JP+Hospital+Shivaji+Nagar+Bhopal" class="card-btn map-btn">🗺️ Map</a>
+      </div>
+    </div>
+
+    <div class="card">
+      <h3>AIIMS Bhopal</h3>
+      <p>📍 Saket Nagar, Habib Ganj</p>
+      <p>🏥 Super Speciality | 📞 Helpline</p>
+      <div class="btn-group">
+        <a href="tel:07552982607" class="card-btn call-btn">📞 Call</a>
+        <a href="https://maps.google.com/?q=AIIMS+Bhopal" class="card-btn map-btn">🗺️ Map</a>
+      </div>
+    </div>
+  `;
+}
 
     function showHotel() {
       document.getElementById('list').innerHTML = `
@@ -296,77 +315,37 @@
 }
 
 function showPolice() {
-    document.getElementById('list').innerHTML = `
-        <div class="card">
-            <b>TT Nagar Police Station</b><br>
-            TT Nagar<br>
-            <div class="rating">⭐ 4.0</div>
-            <div class="btn-group">
-                <a href="tel:07552550100" class="btn-call">📞 Call</a>
-                <a href="https://maps.google.com/?q=TT+Nagar+Police+Station+Bhopal" target="_blank" class="btn-map">🗺️ Map</a>
-            </div>
-        <div class="card">
-            <b>Habibganj Police Station</b><br>
-            Habibganj<br>
-            <div class="rating">⭐ 4.2</div>
-            <div class="btn-group">
-                <a href="tel:07552420101" class="btn-call">📞 Call</a>
-                <a href="https://maps.google.com/?q=Habibganj+Police+Station+Bhopal" target="_blank" class="btn-map">🗺️ Map</a>
-            </div>
-        <div class="card">
-            <b>MP Nagar Police Station</b><br>
-            MP Nagar Zone-2<br>
-            <div class="rating">⭐ 4.1</div>
-            <div class="btn-group">
-                <a href="tel:07552550102" class="btn-call">📞 Call</a>
-                <a href="https://maps.google.com/?q=MP+Nagar+Police+Station+Bhopal" target="_blank" class="btn-map">🗺️ Map</a>
-            </div>
-        </div>
-        <div class="card">
-            <b>Kolar Police Station</b><br>
-            Kolar Road<br>
-            <div class="rating">⭐ 3.9</div>
-            <div class="btn-group">
-                <a href="tel:07552430103" class="btn-call">📞 Call</a>
-                <a href="https://maps.google.com/?q=Kolar+Police+Station+Bhopal" target="_blank" class="btn-map">🗺️ Map</a>
-            </div>
-        </div>
-        <div class="card">
-            <b>Kamla Nagar Police Station</b><br>
-            Kamla Nagar<br>
-            <div class="rating">⭐ 4.0</div>
-            <div class="btn-group">
-                <a href="tel:07552600104" class="btn-call">📞 Call</a>
-                <a href="https://maps.google.com/?q=Kamla+Nagar+Police+Station+Bhopal" target="_blank" class="btn-map">🗺️ Map</a>
-            </div>
-        </div>
-        <div class="card">
-            <b>Shahpura Police Station</b><br>
-            Shahpura<br>
-            <div class="rating">⭐ 4.2</div>
-            <div class="btn-group">
-                <a href="tel:07552470105" class="btn-call">📞 Call</a>
-                <a href="https://maps.google.com/?q=Shahpura+Police+Station+Bhopal" target="_blank" class="btn-map">🗺️ Map</a>
-            </div>
-        </div>
-        <div class="card">
-            <b>Piplani Police Station</b><br>
-            Piplani<br>
-            <div class="rating">⭐ 3.8</div>
-            <div class="btn-group">
-                <a href="tel:07552680106" class="btn-call">📞 Call</a>
-                <a href="https://maps.google.com/?q=Piplani+Police+Station+Bhopal" target="_blank" class="btn-map">🗺️ Map</a>
-            </div>
-        <div class="card">
-            <b>Ashoka Garden Police Station</b><br>
-            Ashoka Garden<br>
-            <div class="rating">⭐ 4.1</div>
-            <div class="btn-group">
-                <a href="tel:07552740107" class="btn-call">📞 Call</a>
-                <a href="https://maps.google.com/?q=Ashoka+Garden+Police+Station+Bhopal" target="_blank" class="btn-map">🗺️ Map</a>
-            </div>
-        </div>
-    `;
+  document.getElementById('content').innerHTML = `
+    <div class="card">
+      <h3>MP Nagar Police Station</h3>
+      <p>📍 Near LIC Office, M P Nagar</p>
+      <p>📞 Emergency: 100</p>
+      <div class="btn-group">
+        <a href="tel:07552443740" class="card-btn call-btn">📞 Call</a>
+        <a href="https://maps.google.com/?q=MP+Nagar+Police+Station+Bhopal" class="card-btn map-btn">🗺️ Map</a>
+      </div>
+    </div>
+
+    <div class="card">
+      <h3>TT Nagar Police Station</h3>
+      <p>📍 Near New Market, T T Nagar</p>
+      <p>📞 Emergency: 100</p>
+      <div class="btn-group">
+        <a href="tel:07552443730" class="card-btn call-btn">📞 Call</a>
+        <a href="https://maps.google.com/?q=TT+Nagar+Police+Station+Bhopal" class="card-btn map-btn">🗺️ Map</a>
+      </div>
+    </div>
+
+    <div class="card">
+      <h3>Habibganj Police Station</h3>
+      <p>📍 Beside HP Petrol Pump, Arera Colony</p>
+      <p>📞 Emergency: 100</p>
+      <div class="btn-group">
+        <a href="tel:07552443790" class="card-btn call-btn">📞 Call</a>
+        <a href="https://maps.google.com/?q=Habibganj+Police+Station+Bhopal" class="card-btn map-btn">🗺️ Map</a>
+      </div>
+    </div>
+  `;
 }
 
 function showMechanic() {
@@ -446,47 +425,92 @@ function showMechanic() {
     `;
 }
 
-function showKirana() {
-    document.getElementById('list').innerHTML = `
-        <div class="card">
-            <b>Sharma Kirana Store</b><br>
-            MP Nagar<br>
-            <div class="rating">⭐ 4.5</div>
-            <div class="btn-group">
-                <a href="tel:9893011111" class="btn-call">📞 Call</a>
-                <a href="https://maps.google.com/?q=Sharma+Kirana+Store+MP+Nagar+Bhopal" target="_blank" class="btn-map">🗺️ Map</a>
-            </div>
-        </div>
-        <div class="card">
-            <b>Gupta General Store</b><br>
-            Arera Colony<br>
-            <div class="rating">⭐ 4.3</div>
-            <div class="btn-group">
-                <a href="tel:9826022222" class="btn-call">📞 Call</a>
-                <a href="https://maps.google.com/?q=Gupta+General+Store+Arera+Colony+Bhopal" target="_blank" class="btn-map">🗺️ Map</a>
-            </div>
-        </div>
-        <div class="card">
-            <b>New Bhopal Kirana</b><br>
-            Kolar Road<br>
-            <div class="rating">⭐ 4.4</div>
-            <div class="btn-group">
-                <a href="tel:9425033333" class="btn-call">📞 Call</a>
-                <a href="https://maps.google.com/?q=New+Bhopal+Kirana+Kolar+Road+Bhopal" target="_blank" class="btn-map">🗺️ Map</a>
-            </div>
-        </div>
-        <div class="card">
-            <b>City Super Market</b><br>
-            TT Nagar<br>
-            <div class="rating">⭐ 4.6</div>
-            <div class="btn-group">
-                <a href="tel:9009044444" class="btn-call">📞 Call</a>
-                <a href="https://maps.google.com/?q=City+Super+Market+TT+Nagar+Bhopal" target="_blank" class="btn-map">🗺️ Map</a>
-            </div>
-        </div>
-        <div class="card">
-            <b>Bairagarh Kirana</b><br>
-            Bairagarh<br>
+function showSuperMarket() {
+  document.getElementById('list').innerHTML = `
+    <div class="card">
+      <b>D-Mart - Kolar Road</b><br>
+      Halka, Kolar Road<br>
+      <div class="rating">⭐ 4.2</div>
+      <div class="btn-group">
+        <a href="tel:02233400500" class="btn-call">📞 Call</a>
+        <a href="https://maps.google.com/?q=D+Mart+Kolar+Road+Bhopal" target="_blank" class="btn-map">🗺️ Map</a>
+      </div>
+    <div class="card">
+      <b>D-Mart - Misrod</b><br>
+      Hoshangabad Road, Misrod<br>
+      <div class="rating">⭐ 4.1</div>
+      <div class="btn-group">
+        <a href="tel:02233400500" class="btn-call">📞 Call</a>
+        <a href="https://maps.google.com/?q=D+Mart+Misrod+Bhopal" target="_blank" class="btn-map">🗺️ Map</a>
+      </div>
+    <div class="card">
+      <b>D-Mart - Jahangirabad</b><br>
+      Lily Trade, Neelam Park<br>
+      <div class="rating">⭐ 4.2</div>
+      <div class="btn-group">
+        <a href="tel:02233400500" class="btn-call">📞 Call</a>
+        <a href="https://maps.google.com/?q=D+Mart+Jahangirabad+Bhopal" target="_blank" class="btn-map">🗺️ Map</a>
+      </div>
+    <div class="card">
+      <b>Reliance SMART Bazaar - DB Mall</b><br>
+      LG29, DB Mall, MP Nagar<br>
+      <div class="rating">⭐ 2.6</div>
+      <div class="btn-group">
+        <a href="tel:18008910001" class="btn-call">📞 Call</a>
+        <a href="https://maps.google.com/?q=Reliance+SMART+Bazaar+DB+Mall+Bhopal" target="_blank" class="btn-map">🗺️ Map</a>
+      </div>
+    </div>
+    <div class="card">
+      <b>Reliance SMART Superstore - Bawadiya Kalan</b><br>
+      Akrati Eco City, Bawadiya Kalan<br>
+      <div class="rating">⭐ 4.1</div>
+      <div class="btn-group">
+        <a href="tel:18008910001" class="btn-call">📞 Call</a>
+        <a href="https://maps.google.com/?q=Reliance+SMART+Superstore+Bawadiya+Kalan+Bhopal" target="_blank" class="btn-map">🗺️ Map</a>
+      </div>
+    </div>
+    <div class="card">
+      <b>Reliance SMART Superstore - Santoshi Vihar</b><br>
+      Shop 11-15, Ayodhya Road<br>
+      <div class="rating">⭐ 4.0</div>
+      <div class="btn-group">
+        <a href="tel:18008910001" class="btn-call">📞 Call</a>
+        <a href="https://maps.google.com/?q=Reliance+SMART+Superstore+Santoshi+Vihar+Bhopal" target="_blank" class="btn-map">🗺️ Map</a>
+      </div>
+    <div class="card">
+      <b>Big Bazaar - Aura Mall</b><br>
+      NDS Colony, Arera Colony<br>
+      <div class="rating">⭐ 4.0</div>
+      <div class="btn-group">
+        <a href="tel:07554122043" class="btn-call">📞 Call</a>
+        <a href="https://maps.google.com/?q=Big+Bazaar+Aura+Mall+Bhopal" target="_blank" class="btn-map">🗺️ Map</a>
+      </div>
+    <div class="card">
+      <b>BEST Price Modern Wholesale</b><br>
+      Near Peoples Mall, Karond<br>
+      <div class="rating">⭐ 4.2</div>
+      <div class="btn-group">
+        <a href="tel:08401298642" class="btn-call">📞 Call</a>
+        <a href="https://maps.google.com/?q=BEST+Price+Modern+Wholesale+Karond+Bhopal" target="_blank" class="btn-map">🗺️ Map</a>
+      </div>
+    <div class="card">
+      <b>Mahabali Traders</b><br>
+      Wholesale Kirana, MP Nagar<br>
+      <div class="rating">⭐ 4.4</div>
+      <div class="btn-group">
+        <a href="tel:07947198861" class="btn-call">📞 Call</a>
+        <a href="https://maps.google.com/?q=Mahabali+Traders+Bhopal" target="_blank" class="btn-map">🗺️ Map</a>
+      </div>
+    <div class="card">
+      <b>Aapoorti Super Market</b><br>
+      MP Nagar<br>
+      <div class="rating">⭐ 3.6</div>
+      <div class="btn-group">
+        <a href="https://maps.google.com/?q=Aapoorti+Super+Market+Bhopal" target="_blank" class="btn-map">🗺️ Map</a>
+      </div>
+    </div>
+  `;
+}
             <div class="rating">⭐ 4.2</div>
             <div class="btn-group">
                 <a href="tel:9827055555" class="btn-call">📞 Call</a>
@@ -582,21 +606,42 @@ function showBusStand() {
             <b>Karond Bus Stop</b><br>
             Karond Chauraha<br>
             <div class="rating">⭐ 3.8</div>
-            <div class="btn-group">
-                <a href="tel:07552600007" class="btn-call">📞 Call</a>
-                <a href="https://maps.google.com/?q=Karond+Bus+Stop+Bhopal" target="_blank" class="btn-map">🗺️ Map</a>
-            </div>
-        </div>
-        <div class="card">
-            <b>Piplani Bus Stop</b><br>
-            Piplani<br>
-            <div class="rating">⭐ 3.9</div>
-            <div class="btn-group">
-                <a href="tel:07552680008" class="btn-call">📞 Call</a>
-                <a href="https://maps.google.com/?q=Piplani+Bus+Stop+Bhopal" target="_blank" class="btn-map">🗺️ Map</a>
-            </div>
-        </div>
-    `;
+function showBusStand() {
+  document.getElementById('list').innerHTML = `
+    <div class="card">
+      <b>ISBT Bhopal</b><br>
+      Hoshangabad Road, Habibganj<br>
+      <div class="rating">⭐ 4.3</div>
+      <div class="btn-group">
+        <a href="tel:9993288888" class="btn-call">📞 Call</a>
+        <a href="https://maps.google.com/?q=ISBT+Bhopal" target="_blank" class="btn-map">🗺️ Map</a>
+      </div>
+    </div>
+    <div class="card">
+      <b>Nadra Bus Stand</b><br>
+      Chola Road, Old Bhopal<br>
+      <div class="rating">⭐ 4.0</div>
+      <div class="btn-group">
+        <a href="tel:9755102080" class="btn-call">📞 Call</a>
+        <a href="https://maps.google.com/?q=Nadra+Bus+Stand+Bhopal" target="_blank" class="btn-map">🗺️ Map</a>
+      </div>
+    <div class="card">
+      <b>Bairagarh Bus Stand</b><br>
+      Bairagarh<br>
+      <div class="rating">⭐ 3.9</div>
+      <div class="btn-group">
+        <a href="https://maps.google.com/?q=Bairagarh+Bus+Stand+Bhopal" target="_blank" class="btn-map">🗺️ Map</a>
+      </div>
+    </div>
+    <div class="card">
+      <b>MP Nagar Bus Stop</b><br>
+      MP Nagar Zone-1<br>
+      <div class="rating">⭐ 4.2</div>
+      <div class="btn-group">
+        <a href="https://maps.google.com/?q=MP+Nagar+Bus+Stop+Bhopal" target="_blank" class="btn-map">🗺️ Map</a>
+      </div>
+    </div>
+  `;
 }
   </script>
   <!--Start of Tawk.to Script-->
