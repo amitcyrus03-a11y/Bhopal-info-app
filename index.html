@@ -58,6 +58,11 @@
     <button onclick="showSalon()">Salon</button>
     <button onclick="showCloth()">Cloth Store</button>
     <button onclick="showMedical()">Medical Store</button>
+          <button onclick="showATM()">ATM/Bank</button>
+      <button onclick="showPolice()">Police Station</button>
+      <button onclick="showMechanic()">Mechanic</button>
+      <button onclick="showKirana()">Kirana Store</button>
+      <button onclick="showBusStand()">Bus Stand</button>
   </div>
   
   <div id="list"></div>
@@ -212,6 +217,59 @@
         <div class="card"><b>1mg Labs</b> ⭐ 4.2<br>📍 Bairagarh<br>🕒 8:00 AM - 9:00 PM<br><span class="tag">Lab Test</span><br><a class="card-btn call-btn" href="tel:07554050001">📞 Call</a><a class="card-btn map-btn" href="https://maps.google.com/?q=1mg+Labs+Bairagarh+Bhopal">📍 Map</a></div>
       `;
     }
+    function showATM() {
+    document.getElementById('list').innerHTML = `
+        <div class="card"><b>SBI ATM</b><br>MP Nagar Zone 1<br>1800-1234</div>
+        <div class="card"><b>HDFC Bank ATM</b><br>New Market<br>1800-5678</div>
+        <div class="card"><b>ICICI Bank</b><br>Arera Colony<br>1800-1080</div>
+    `;
+}
+
+function showPolice() {
+    document.getElementById('list').innerHTML = `
+        <div class="card"><b>MP Nagar Police Station</b><br>Zone 1, MP Nagar<br>100 / 0755-2550100</div>
+        <div class="card"><b>TT Nagar Thana</b><br>TT Nagar<br>100 / 0755-2550200</div>
+        <div class="card"><b>Habibganj Police Station</b><br>Habibganj<br>100</div>
+    `;
+}
+function showMechanic() {
+    document.getElementById('list').innerHTML = `
+        <div class="card"><b>Bhopal Auto Garage</b><br>Hamidia Road<br>98765-43210</div>
+        <div class="card"><b>City Bike Service</b><br>Kolar Road<br>98260-11111</div>
+        <div class="card"><b>Sharma Car Repair</b><br>MP Nagar<br>97550-22222</div>
+    `;
+}
+
+function showKirana() {
+    document.getElementById('list').innerHTML = `
+        <div class="card"><b>Sharma General Store</b><br>Kolar Road<br>98260-12345</div>
+        <div class="card"><b>Gupta Kirana</b><br>Arera Colony<br>98930-54321</div>
+        <div class="card"><b>Apna Mart</b><br>New Market<br>94250-67890</div>
+    `;
+}
+function showBusStand() {
+    document.getElementById('list').innerHTML = `
+        <div class="card"><b>Nadra Bus Stand</b><br>Old Bhopal<br>0755-2740001</div>
+        <div class="card"><b>ISBT</b><br>Hoshangabad Road<br>0755-2420002</div>
+        <div class="card"><b>Habibganj Bus Stop</b><br>Habibganj<br>-</div>
+    `;
+}
+
+function showMechanic() {
+    document.getElementById('list').innerHTML = `
+        <div class="card"><b>Bhopal Auto Garage</b><br>Hamidia Road<br>98765-43210</div>
+        <div class="card"><b>City Bike Service</b><br>Kolar Road<br>98260-11111</div>
+    `;
+}
+
+function showKirana() {
+    document.getElementById('list').innerHTML = `
+        <div class="card"><b>Sharma General Store</b><br>Kolar Road<br>98260-12345</div>
+        <div class="card"><b>Gupta Kirana</b><br>Arera Colony<br>98930-54321</div>
+    `;
+}
+
+
   </script>
   <!--Start of Tawk.to Script-->
 <script type="text/javascript">
