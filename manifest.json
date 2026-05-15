@@ -1,6 +1,6 @@
 {
-  "name": "Bhopal Info App",
-  "short_name": "Bhopal Info",
+"name": "HELLO BHOPAL",
+  "short_name": "HELLO BHOPAL",
   "start_url": "/Bhopal-info-app/",
   "scope": "/Bhopal-info-app/",
   "display": "standalone",
