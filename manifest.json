@@ -1,8 +1,8 @@
 {
 "name": "HELLO BHOPAL",
   "short_name": "HELLO BHOPAL",
-  "start_url": "/Bhopal-info-app/",
-  "scope": "/Bhopal-info-app/",
+"start_url": "/",
+"scope": "/",
   "display": "standalone",
   "background_color": "#ffffff",
   "theme_color": "#4A90E2",
