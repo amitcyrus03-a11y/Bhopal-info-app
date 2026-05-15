@@ -1,4 +1,4 @@
-const CACHE_NAME = 'bhopal-info-v1';
+const CACHE_NAME = 'bhopal-info-v2';
 
 self.addEventListener('install', (event) => {
   self.skipWaiting();
