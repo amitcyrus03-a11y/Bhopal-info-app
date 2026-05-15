@@ -1,4 +1,4 @@
-const CACHE_NAME = 'bhopal-info-v2';
+const CACHE_NAME = 'bhopal-info-v4';
 
 self.addEventListener('install', (event) => {
   self.skipWaiting();
@@ -8,8 +8,5 @@ self.addEventListener('activate', (event) => {
   event.waitUntil(clients.claim());
 });
 
-self.addEventListener('fetch', (event) => {
-  event.respondWith(
-    fetch(event.request).catch(() => caches.match(event.request))
-  );
-});
+// Fetch ko bilkul khali chhod de - Install ke liye bas event chahiye
+self.addEventListener('fetch', (event) => {});
