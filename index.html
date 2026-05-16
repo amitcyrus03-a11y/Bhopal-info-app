@@ -98,6 +98,7 @@
   <div class="btn-container">
     <button onclick="showRestaurant()">Restaurant</button>
     <button onclick="showElectronics()">Electronics</button>
+    <button onclick="showCityLink()">🚌 City Link</button> 
     <button onclick="showHospital()">Hospital</button>
     <button onclick="showHotel()">Hotel</button>
     <button onclick="showPetrol()">Petrol Pump</button>
@@ -631,6 +632,39 @@ function showBusStand() {
     </div>
   `;
 }
+ function showCityLink() {
+  document.getElementById('list').innerHTML = `
+    <div class="card">
+      <b>🚌 Route TR-1: Nehru Nagar → Bairagarh</b><br>
+      📍 Via: New Market, Board Office, Habibganj<br>
+      <div class="rating">⭐ BCCL City Bus</div>
+      <div class="time">🕒 6:30 AM - 9:00 PM | Every 15 min</div>
+      <div class="btn-group">
+        <a href="https://chalo.com/bhopal/bus/TR-1" class="card-btn call-btn" target="_blank">📍 Live Location</a>
+        <a href="tel:07552703333" class="card-btn call-btn">📞 Helpline</a>
+      </div>
+    </div>
+    
+    <div class="card">
+      <b>🚌 Route SR-2: Gandhi Nagar → ISBT</b><br>
+      📍 Via: MP Nagar, Jyoti Talkies, Railway Station<br>
+      <div class="rating">⭐ BCCL City Bus</div>
+      <div class="time">🕒 6:00 AM - 10:00 PM | Every 20 min</div>
+      <div class="btn-group">
+        <a href="https://chalo.com/bhopal/bus/SR-2" class="card-btn call-btn" target="_blank">📍 Live Location</a>
+        <a href="tel:07552703333" class="card-btn call-btn">📞 Helpline</a>
+      </div>
+    </div>
+    
+    <div class="card">
+      <b>📱 Saare Routes Live Dekho</b><br>
+      📍 Chalo App pe Bhopal ki har bus ka real time status<br>
+      <div class="btn-group">
+        <a href="https://chalo.com/bhopal" class="card-btn call-btn" target="_blank">🚌 Live Tracking Kholo</a>
+      </div>
+    </div>
+  `;
+}     
   </script>
   <!--Start of Tawk.to Script-->
 <script type="text/javascript">
