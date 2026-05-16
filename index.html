@@ -56,6 +56,29 @@
 </head>
 
 <body>
+<!-- SPLASH SCREEN START -->
+<div id="splash" style="position: fixed; top: 0; left: 0; width: 100%; height: 100%; background: linear-gradient(135deg, #1E90FF 0%, #4A90E2 100%); display: flex; flex-direction: column; justify-content: center; align-items: center; z-index: 9999;">
+  
+  <h1 id="splash-title" style="color: white; font-size: 32px; font-weight: 800; letter-spacing: 1px; text-shadow: 0 2px 8px rgba(0,0,0,0.3); opacity: 0; margin: 0;">
+    HELLO BHOPAL
+  </h1>
+  
+  <div id="ecg-wrap" style="width: 200px; height: 40px; margin: 20px 0; opacity: 0;">
+    <svg id="ecg" viewBox="0 0 200 40" style="width: 100%; height: 100%;">
+      <polyline fill="none" stroke="rgba(0,255,255,0.9)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" points="0,20 40,20 50,10 60,30 70,5 80,20 200,20"/>
+    </svg>
+  </div>
+  
+  <p id="splash-tag" style="color: rgba(255,255,255,0.95); font-size: 14px; font-weight: 600; letter-spacing: 0.5px; opacity: 0; margin: 0; transform: translateY(20px);">
+    Non Stop Help Line
+  </p>
+  
+</div>
+
+<audio id="beep" src="data:audio/wav;base64,UklGRiQAAABXQVZFZm10IBAAAAABAAEAQB8AAEAfAAABAAgAZGF0YQAAAAA=" preload="auto"></audio>
+<!-- SPLASH SCREEN END -->
+
+    
 <div style="background: linear-gradient(135deg, #1E90FF 0%, #4A90E2 100%); padding: 20px 16px; text-align: center; margin: -16px -16px 20px -16px; box-shadow: 0 4px 12px rgba(0,0,0,0.15);">
   <img src="/icon-192x192.png" alt="HB" style="width: 55px; height: 55px; margin-bottom: 6px; filter: drop-shadow(0 0 8px rgba(0,255,255,0.5));">
   <h1 style="color: white; margin: 0; font-size: 26px; font-weight: 800; letter-spacing: 0.5px; text-shadow: 0 2px 4px rgba(0,0,0,0.2);">
@@ -620,6 +643,52 @@ s0.parentNode.insertBefore(s1,s0);
             navigator.serviceWorker.registe
         }
     </script>
+<script>
+  // SPLASH TIMING: 2.5s ka fadu intro
+  window.addEventListener('load', () => {
+    const splash = document.getElementById('splash');
+    const title = document.getElementById('splash-title');
+    const ecgWrap = document.getElementById('ecg-wrap');
+    const ecgLine = document.querySelector('#ecg polyline');
+    const tag = document.getElementById('splash-tag');
+    const beep = document.getElementById('beep');
 
+    if (!splash) return; // Safety check
+
+    // ECG line setup
+    const length = ecgLine.getTotalLength();
+    ecgLine.style.strokeDasharray = length;
+    ecgLine.style.strokeDashoffset = length;
+
+    // 1. HELLO BHOPAL fade in - 0.9s
+    setTimeout(() => {
+      title.style.transition = 'opacity 0.9s ease';
+      title.style.opacity = '1';
+    }, 100);
+
+    // 2. ECG + Beep - start at 0.9s, duration 1.2s
+    setTimeout(() => {
+      ecgWrap.style.transition = 'opacity 0.3s';
+      ecgWrap.style.opacity = '1';
+      ecgLine.style.transition = 'stroke-dashoffset 1.2s ease-in-out';
+      ecgLine.style.strokeDashoffset = '0';
+      beep.play().catch(e => {});
+    }, 900);
+
+    // 3. Non Stop Help Line slide up - start at 2.1s, duration 0.5s
+    setTimeout(() => {
+      tag.style.transition = 'opacity 0.5s ease, transform 0.5s ease';
+      tag.style.opacity = '1';
+      tag.style.transform = 'translateY(0)';
+    }, 2100);
+
+    // 4. Splash hatao - 3s baad
+    setTimeout(() => {
+      splash.style.transition = 'opacity 0.5s ease';
+      splash.style.opacity = '0';
+      setTimeout(() => splash.remove(), 500);
+    }, 3000);
+  });
+</script>
 </body>
 </html>
