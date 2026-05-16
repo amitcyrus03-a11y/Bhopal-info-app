@@ -744,14 +744,19 @@ function showTimetable(routeId) {
   }
   
   // Sab sahi hai to table banao
-  let table = `<h3>${route.name} - Time Table</h3><table border="1" width="100%"><tr><th>Stop</th><th>First Bus</th><th>Last Bus</th></tr>`;
-  route.timetable.forEach(item => {
-    table += `<tr><td>${item.stop}</td><td>${item.first}</td><td>${item.last}</td></tr>`;
-  });
-  table += `</table><br><button onclick="location.reload()">Back</button>`;
-  
-  document.getElementById('list').innerHTML = table;
-  window.scrollTo(0,0);
+  var table = '<h3>' + route.name + ' - Time Table</h3>';
+table += '<table border="1" width="100%">';
+table += '<tr><th>Stop</th><th>First Bus</th><th>Last Bus</th></tr>';
+
+for(var i = 0; i < route.timetable.length; i++) {
+  var item = route.timetable[i];
+  table += '<tr><td>' + item.stop + '</td><td>' + item.first + '</td><td>' + item.last + '</td></tr>';
+}
+
+table += '</table><br><button onclick="location.reload()">Back</button>';
+
+document.getElementById('list').innerHTML = table;
+window.scrollTo(0,0);
 }
 </script>
 <!--End of Tawk.to Script-->
