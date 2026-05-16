@@ -722,37 +722,37 @@ function showBusStand() {
   document.getElementById('list').innerHTML = cards;
 
 function showTimetable(routeId) {
+  console.log('Clicked:', routeId);
+  
+  // Check 1: busData exist karta hai?
+  if(typeof busData === 'undefined') {
+    alert('Error: busData nahi mila');
+    return;
+  }
+  
+  // Check 2: Route mila?
   const route = busData.find(bus => bus.route === routeId);
-  if(!route || !route.timetable) {
+  if(!route) {
+    alert('Error: Route ' + routeId + ' nahi mila. busData check karo');
+    return;
+  }
+  
+  // Check 3: Timetable hai?
+  if(!route.timetable || route.timetable.length === 0) {
     alert('Time Table jaldi update hoga');
     return;
   }
   
-  let table = `<div class="card">
-    <b>🕒 Route ${route.route}: ${route.name}</b><br><br>
-    <table style="width:100%; font-size:14px; border-collapse: collapse;">
-    <tr style="background:#f0f0f0;"><th style="padding:8px; text-align:left;">Stop</th><th style="padding:8px;">First Bus</th><th style="padding:8px;">Last Bus</th></tr>`;
-  
-  route.timetable.forEach(t => {
-    table += `<tr><td style="padding:8px; border-bottom:1px solid #eee;">${t.stop}</td><td style="padding:8px; text-align:center; border-bottom:1px solid #eee;">${t.first}</td><td style="padding:8px; text-align:center; border-bottom:1px solid #eee;">${t.last}</td></tr>`;
+  // Sab sahi hai to table banao
+  let table = `<h3>${route.name} - Time Table</h3><table border="1" width="100%"><tr><th>Stop</th><th>First Bus</th><th>Last Bus</th></tr>`;
+  route.timetable.forEach(item => {
+    table += `<tr><td>${item.stop}</td><td>${item.first}</td><td>${item.last}</td></tr>`;
   });
+  table += `</table><br><button onclick="location.reload()">Back</button>`;
   
-  table += `</table><br>★ Frequency: ${route.frequency}<br>★ Time: ${route.time}</div>`;
   document.getElementById('list').innerHTML = table;
   window.scrollTo(0,0);
 }
-</script>
-  <!--Start of Tawk.to Script-->
-<script type="text/javascript">
-var Tawk_API=Tawk_API||{}, Tawk_LoadStart=new Date();
-(function(){
-var s1=document.createElement("script"),s0=document.getElementsByTagName("script")[0];
-s1.async=true;
-s1.src='https://embed.tawk.to/6a016d34eb073e1c334f0c03/1joap564i';
-s1.charset='UTF-8';
-s1.setAttribute('crossorigin','*');
-s0.parentNode.insertBefore(s1,s0);
-})();
 </script>
 <!--End of Tawk.to Script-->
     <script>
