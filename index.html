@@ -720,8 +720,7 @@ function showBusStand() {
   });
 
   document.getElementById('list').innerHTML = cards;
-}
-      <script>
+
 function showTimetable(routeId) {
   const route = busData.find(bus => bus.route === routeId);
   if(!route || !route.timetable) {
@@ -739,7 +738,7 @@ function showTimetable(routeId) {
   });
   
   table += `</table><br>★ Frequency: ${route.frequency}<br>★ Time: ${route.time}</div>`;
-  document.getElementById('result').innerHTML = table;
+  document.getElementById('list').innerHTML = table;
   window.scrollTo(0,0);
 }
 </script>
