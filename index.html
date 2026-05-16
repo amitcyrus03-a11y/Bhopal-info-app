@@ -633,38 +633,94 @@ function showBusStand() {
   `;
 }
  function showCityLink() {
-  document.getElementById('list').innerHTML = `
+ function showCityLink() {
+  const busData = [
+    {
+      route: "TR-1", 
+      name: "Nehru Nagar ↔ Bairagarh", 
+      stops: "New Market, Board Office, Jyoti Talkies, ISBT, Lalghati", 
+      time: "6:30 AM - 9:30 PM", 
+      freq: "15 min",
+      keyStops: "New Market, Rani Kamlapati Station"
+    },
+    {
+      route: "SR-2", 
+      name: "Gandhi Nagar ↔ ISBT", 
+      stops: "MP Nagar, Mata Mandir, 10 No. Market, New Market", 
+      time: "6:00 AM - 10:00 PM", 
+      freq: "20 min",
+      keyStops: "New Market, Nadra Bus Stand"
+    },
+    {
+      route: "308", 
+      name: "Kolar ↔ Railway Station", 
+      stops: "Danish Kunj, Piplani, BHEL, Hamidia, Alpana, Nadra", 
+      time: "6:15 AM - 9:45 PM", 
+      freq: "20 min",
+      keyStops: "Bhopal Railway Station, Nadra Bus Stand"
+    },
+    {
+      route: "401", 
+      name: "MP Nagar ↔ Airport", 
+      stops: "Board Office, Rani Kamlapati, Lalghati, Bairagarh, Halalpura", 
+      time: "5:30 AM - 10:30 PM", 
+      freq: "30 min",
+      keyStops: "Rani Kamlapati Station, Halalpura Bus Stand"
+    },
+    {
+      route: "TR-4", 
+      name: "Karond ↔ New Market", 
+      stops: "Halalpura, Piplani, Govindpura, Habibganj, MP Nagar", 
+      time: "6:45 AM - 9:15 PM", 
+      freq: "25 min",
+      keyStops: "Halalpura Bus Stand, New Market"
+    },
+    {
+      route: "SR-5", 
+      name: "Bairagarh ↔ Old Bhopal", 
+      stops: "Halalpura, Lalghati, Nadra, Hamidia, Railway Station", 
+      time: "6:00 AM - 9:30 PM", 
+      freq: "20 min",
+      keyStops: "Halalpura Bus Stand, Nadra Bus Stand, Bhopal Railway Station"
+    },
+    {
+      route: "205", 
+      name: "ISBT ↔ Rani Kamlapati", 
+      stops: "Board Office, MP Nagar, Habibganj", 
+      time: "7:00 AM - 9:00 PM", 
+      freq: "30 min",
+      keyStops: "Rani Kamlapati Station"
+    }
+  ];
+
+  let cards = `
     <div class="card">
-      <b>🚌 Route TR-1: Nehru Nagar → Bairagarh</b><br>
-      📍 Via: New Market, Board Office, Habibganj<br>
-      <div class="rating">⭐ BCCL City Bus</div>
-      <div class="time">🕒 6:30 AM - 9:00 PM | Every 15 min</div>
+      <b>🚌 Bhopal City Bus - Main Stops</b><br>
+      📍 <b>Covered:</b> Railway Station, Rani Kamlapati, Nadra, Halalpura, New Market<br>
+      <div class="rating">⭐ Real-time ke liye Chalo App best hai</div>
       <div class="btn-group">
-        <a href="https://chalo.com/bhopal/bus/TR-1" class="card-btn call-btn" target="_blank">📍 Live Location</a>
-        <a href="tel:07552703333" class="card-btn call-btn">📞 Helpline</a>
-      </div>
-    </div>
-    
-    <div class="card">
-      <b>🚌 Route SR-2: Gandhi Nagar → ISBT</b><br>
-      📍 Via: MP Nagar, Jyoti Talkies, Railway Station<br>
-      <div class="rating">⭐ BCCL City Bus</div>
-      <div class="time">🕒 6:00 AM - 10:00 PM | Every 20 min</div>
-      <div class="btn-group">
-        <a href="https://chalo.com/bhopal/bus/SR-2" class="card-btn call-btn" target="_blank">📍 Live Location</a>
-        <a href="tel:07552703333" class="card-btn call-btn">📞 Helpline</a>
-      </div>
-    </div>
-    
-    <div class="card">
-      <b>📱 Saare Routes Live Dekho</b><br>
-      📍 Chalo App pe Bhopal ki har bus ka real time status<br>
-      <div class="btn-group">
-        <a href="https://chalo.com/bhopal" class="card-btn call-btn" target="_blank">🚌 Live Tracking Kholo</a>
+        <a href="https://chalo.com/bhopal" class="card-btn call-btn" target="_blank">📍 Live Tracking</a>
+        <a href="tel:07552703333" class="card-btn call-btn" target="_blank">📞 BCCL Helpline</a>
       </div>
     </div>
   `;
-}     
+
+  busData.forEach(bus => {
+    cards += `
+      <div class="card">
+        <b>🚌 Route ${bus.route}: ${bus.name}</b><br>
+        📍 <b>Via:</b> ${bus.stops}<br>
+        <div class="time">🕒 <b>Time:</b> ${bus.time} | Har ${bus.freq} mein bus</div>
+        <div class="rating">⭐ <b>Main Stops:</b> ${bus.keyStops}</div>
+        <div class="btn-group">
+          <a href="https://chalo.com/bhopal" class="card-btn call-btn" target="_blank">📍 Live Track</a>
+        </div>
+      </div>
+    `;
+  });
+
+  document.getElementById('list').innerHTML = cards;
+}
   </script>
   <!--Start of Tawk.to Script-->
 <script type="text/javascript">
