@@ -718,46 +718,7 @@ function showBusStand() {
       </div>
     `;
   });
-
   document.getElementById('list').innerHTML = cards;
-
-function showTimetable(routeId) {
-  console.log('Clicked:', routeId);
-  
-  // Check 1: busData exist karta hai?
-  if(typeof busData === 'undefined') {
-    alert('Error: busData nahi mila');
-    return;
-  }
-  
-  // Check 2: Route mila?
-  const route = busData.find(bus => bus.route === routeId);
-  if(!route) {
-    alert('Error: Route ' + routeId + ' nahi mila. busData check karo');
-    return;
-  }
-  
-  // Check 3: Timetable hai?
-  if(!route.timetable || route.timetable.length === 0) {
-    alert('Time Table jaldi update hoga');
-    return;
-  }
-  
-  // Sab sahi hai to table banao
-  var table = '<h3>' + route.name + ' - Time Table</h3>';
-table += '<table border="1" width="100%">';
-table += '<tr><th>Stop</th><th>First Bus</th><th>Last Bus</th></tr>';
-
-for(var i = 0; i < route.timetable.length; i++) {
-  var item = route.timetable[i];
-  table += '<tr><td>' + item.stop + '</td><td>' + item.first + '</td><td>' + item.last + '</td></tr>';
-}
-
-table += '</table><br><button onclick="location.reload()">Back</button>';
-
-document.getElementById('list').innerHTML = table;
-window.scrollTo(0,0);
-}
 </script>
 <!--End of Tawk.to Script-->
     <script>
@@ -765,7 +726,6 @@ window.scrollTo(0,0);
             navigator.serviceWorker.registe
         }
     </script>
-<script>
   // SPLASH TIMING: 2.5s ka fadu intro
   window.addEventListener('load', () => {
     const splash = document.getElementById('splash');
