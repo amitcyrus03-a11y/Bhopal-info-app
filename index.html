@@ -727,6 +727,15 @@ function showBusStand() {
         }
     </script>
 <script>
+    // TIME TABLE FUNCTION - SAFE VERSION
+function showTimetable(type) {
+  const link = "https://mponline.gov.in/portal/services/OnlineCounselling/counclient/DTE/BE_BTECH_Timetable.aspx";
+  if(type === 'mp') {
+    window.open(link, '_blank');
+  } else {
+    alert('Coming Soon');
+  }
+}
   // SPLASH TIMING: 2.5s ka fadu intro
   window.addEventListener('load', () => {
     const splash = document.getElementById('splash');
