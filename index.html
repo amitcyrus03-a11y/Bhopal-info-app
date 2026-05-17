@@ -95,6 +95,44 @@
     Non Stop Help Line
   </p>
 </div>
+ <!-- Live Bhopal News Ticker START -->
+<div style="background:#B71C1C;color:white;padding:10px 0;overflow:hidden;font-size:14px;font-family:Arial,sans-serif">
+  <div id="bhopalNews" style="display:inline-block;white-space:nowrap;animation:scroll-left 35s linear infinite">
+    🔴 Loading Latest Bhopal News...
+  </div>
+</div>
+
+<style>
+@keyframes scroll-left {
+  0% { transform: translateX(100%); }
+  100% { transform: translateX(-100%); }
+}
+#bhopalNews a {
+  color: #FFEB3B;
+  text-decoration: none;
+  margin: 0 40px;
+  font-weight: 500;
+}
+#bhopalNews:hover {
+  animation-play-state: paused;
+}
+</style>
+
+<script>
+fetch('https://api.rss2json.com/v1/api.json?rss_url=' + encodeURIComponent('https://news.google.com/rss/search?q=Bhopal&hl=hi&gl=IN&ceid=IN:hi'))
+  .then(response => response.json())
+  .then(data => {
+    let newsHTML = '';
+    data.items.slice(0, 8).forEach(item => {
+      newsHTML += `<a href="${item.link}" target="_blank">🔴 ${item.title}</a> | `;
+    });
+    document.getElementById('bhopalNews').innerHTML = newsHTML;
+  })
+  .catch(error => {
+    document.getElementById('bhopalNews').innerHTML = '<a href="https://www.bhaskar.com/local/mp/bhopal/" target="_blank">🔴 Click here for Latest Bhopal News</a>';
+  });
+</script>
+<!-- Live Bhopal News Ticker END -->   
   <div class="btn-container">
     <button onclick="showRestaurant()">Restaurant</button>
     <button onclick="showElectronics()">Electronics</button>
