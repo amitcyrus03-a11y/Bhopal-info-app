@@ -95,44 +95,19 @@
     Non Stop Help Line
   </p>
 </div>
- <!-- Live Bhopal News Ticker START -->
-<div style="background:#B71C1C;color:white;padding:10px 0;overflow:hidden;font-size:14px;font-family:Arial,sans-serif">
-  <div id="bhopalNews" style="display:inline-block;white-space:nowrap;animation:scroll-left 35s linear infinite">
-    🔴 Loading Latest Bhopal News...
-  </div>
+<!-- Live Bhopal News Ticker START -->
+<div style="background:#B71C1C;color:white;padding:16px 0;overflow:hidden;font-size:16px;font-family:Arial,sans-serif;font-weight:bold">
+  <marquee behavior="scroll" direction="left" scrollamount="6" onmouseover="this.stop();" onmouseout="this.start();">
+    <a href="https://www.bhaskar.com/local/mp/bhopal/" target="_blank" style="color:#FFEB3B;text-decoration:none;margin:0 50px">🔴 Dainik Bhaskar: Bhopal News</a> |
+    <a href="https://www.patrika.com/bhopal-news/" target="_blank" style="color:#FFEB3B;text-decoration:none;margin:0 50px">🔴 Patrika: भोपाल समाचार</a> |
+    <a href="https://navbharattimes.indiatimes.com/state/madhya-pradesh/bhopal/" target="_blank" style="color:#FFEB3B;text-decoration:none;margin:0 50px">🔴 Navbharat Times: Bhopal</a> |
+    <a href="https://news.google.com/topics/CAAqJggKIiBDQkFTRWdvSUwyMHZNRFZxYUdjU0FtVnVHZ0pKVGlnQVAB" target="_blank" style="color:#FFEB3B;text-decoration:none;margin:0 50px">🔴 Google News: Bhopal</a> |
+    <a href="https://www.livehindustan.com/madhya-pradesh/bhopal/news" target="_blank" style="color:#FFEB3B;text-decoration:none;margin:0 50px">🔴 Live Hindustan: Bhopal</a> |
+    <a href="https://www.amarujala.com/madhya-pradesh/bhopal" target="_blank" style="color:#FFEB3B;text-decoration:none;margin:0 50px">🔴 Amar Ujala: Bhopal Local</a> |
+    <a href="https://mpbreakingnews.in/bhopal/" target="_blank" style="color:#FFEB3B;text-decoration:none;margin:0 50px">🔴 MP Breaking News: Bhopal</a>
+  </marquee>
 </div>
-
-<style>
-@keyframes scroll-left {
-  0% { transform: translateX(100%); }
-  100% { transform: translateX(-100%); }
-}
-#bhopalNews a {
-  color: #FFEB3B;
-  text-decoration: none;
-  margin: 0 40px;
-  font-weight: 500;
-}
-#bhopalNews:hover {
-  animation-play-state: paused;
-}
-</style>
-
-<script>
-fetch('https://api.rss2json.com/v1/api.json?rss_url=' + encodeURIComponent('https://news.google.com/rss/search?q=Bhopal&hl=hi&gl=IN&ceid=IN:hi'))
-  .then(response => response.json())
-  .then(data => {
-    let newsHTML = '';
-    data.items.slice(0, 8).forEach(item => {
-      newsHTML += `<a href="${item.link}" target="_blank">🔴 ${item.title}</a> | `;
-    });
-    document.getElementById('bhopalNews').innerHTML = newsHTML;
-  })
-  .catch(error => {
-    document.getElementById('bhopalNews').innerHTML = '<a href="https://www.bhaskar.com/local/mp/bhopal/" target="_blank">🔴 Click here for Latest Bhopal News</a>';
-  });
-</script>
-<!-- Live Bhopal News Ticker END -->   
+<!-- Live Bhopal News Ticker END -->
   <div class="btn-container">
     <button onclick="showRestaurant()">Restaurant</button>
     <button onclick="showElectronics()">Electronics</button>
